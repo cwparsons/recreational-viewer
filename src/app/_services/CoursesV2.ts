@@ -15,10 +15,10 @@ const CoursesV2 = async (subdomain: string, calendarId: string): Promise<Courses
   });
 
   if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+    throw new Error(`HTTP error. Status: ${response.status}`);
   }
 
-  return response.json() as Promise<CoursesV2Response>;
+  return response.json();
 };
 
 export default CoursesV2;

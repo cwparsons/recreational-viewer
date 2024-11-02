@@ -6,7 +6,7 @@ import { Locations } from '@/locations';
 export default async function Page({ params }: { params: Promise<{ city: string }> }) {
   const { city } = await params;
   const categories = await GetCategoriesDataV2(city);
-  const cityName = Locations.find((l) => l.subdomain === city)?.name;
+  const cityName = Locations.flatMap((location) => location.sites).find((site) => site.subdomain === city)?.name;
 
   return (
     <>

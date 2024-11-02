@@ -17,6 +17,7 @@ export default async function Page({ params }: { params: Promise<{ city: string;
   const executeInBatches = async () => {
     for (let i = 0; i < ids.length; i += CONCURRENCY_LIMIT) {
       const batch = ids.slice(i, i + CONCURRENCY_LIMIT);
+
       await Promise.all(
         batch.map(async (id) => {
           const data = await CoursesV2(city, id);
@@ -28,7 +29,7 @@ export default async function Page({ params }: { params: Promise<{ city: string;
 
   await executeInBatches();
 
-  const cityName = Locations.find((l) => l.subdomain === city)?.name;
+  const cityName = Locations.flatMap((location) => location.sites).find((site) => site.subdomain === city)?.name;
 
   const categories = await GetCategoriesDataV2(city);
   const currentCategory = categories.find((c) => c.Calendars.some((cal) => cal.Id === ids[0]));
