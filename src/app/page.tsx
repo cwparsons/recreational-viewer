@@ -6,7 +6,7 @@ import { Locations } from '@/locations';
 export default async function Home() {
   return (
     <>
-      <Header title={'Directory'} />
+      <Header breadcrumbs={[]} title={'Directory'} />
 
       <div className="grid gap-6 grid-cols-[repeat(auto-fill,minmax(320px,1fr))]">
         {Locations.map(({ name, sites }) => (

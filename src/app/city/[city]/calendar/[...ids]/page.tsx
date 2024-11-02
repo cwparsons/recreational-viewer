@@ -43,7 +43,6 @@ export default async function Page({ params }: { params: Promise<{ city: string;
         breadcrumbs={[
           { label: 'Directory', href: '/' },
           { label: cityName ?? '', href: `/city/${city}` },
-          { label: title, href: `/city/${city}/calendar/${ids[0]}` },
         ]}
       />
 
