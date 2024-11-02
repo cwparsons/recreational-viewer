@@ -8,12 +8,12 @@ export interface GetCategoriesDataV2 {
 }
 
 export interface Calendar {
-  Items: any[];
-  Category: any;
+  Items: unknown[];
+  Category: unknown;
   BookingLink?: string;
   MakeupBookingLink?: string;
   BookingTypeInfo: BookingTypeInfo;
-  AssignedServices: any;
+  AssignedServices: unknown;
   PreventDuplicateBookingWithinEventGroup: boolean;
   Id: string;
   Name: string;

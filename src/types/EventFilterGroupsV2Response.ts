@@ -5,7 +5,7 @@ export interface EventFilterGroupsV2Response {
 export interface FilterGroup {
   GroupName: string;
   GroupPluralName?: string;
-  FilterGroupOrder: any;
+  FilterGroupOrder: unknown;
   FilterGroupKind: number;
   Values: Value[];
   Visible: boolean;
@@ -13,7 +13,7 @@ export interface FilterGroup {
 
 export interface Value {
   Name: string;
-  ReadableName: any;
+  ReadableName: unknown;
   Value?: string;
   Value2?: string;
   Metadata?: Metadata;
@@ -27,10 +27,10 @@ export interface Metadata {
 
 export interface Children {
   Name: string;
-  ReadableName: any;
+  ReadableName: unknown;
   Value: string;
-  Value2: any;
-  Metadata: any;
+  Value2: unknown;
+  Metadata: unknown;
   ValueKind: number;
-  Children: any[];
+  Children: unknown[];
 }

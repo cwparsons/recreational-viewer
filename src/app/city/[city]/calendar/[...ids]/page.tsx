@@ -7,16 +7,26 @@ import GetCategoriesDataV2 from '@/app/_services/GetCategoriesDataV2';
 import { Locations } from '@/locations';
 import { Course } from '@/types/CoursesV2Response';
 
+const CONCURRENCY_LIMIT = 8;
+
 export default async function Page({ params }: { params: Promise<{ city: string; ids: string[] }> }) {
   const { city, ids } = await params;
 
   const courses: Course[] = [];
 
-  for (let i = 0; i < ids.length; i++) {
-    const data = await CoursesV2(city, ids[i]);
+  const executeInBatches = async () => {
+    for (let i = 0; i < ids.length; i += CONCURRENCY_LIMIT) {
+      const batch = ids.slice(i, i + CONCURRENCY_LIMIT);
+      await Promise.all(
+        batch.map(async (id) => {
+          const data = await CoursesV2(city, id);
+          courses.push(...data.courses);
+        })
+      );
+    }
+  };
 
-    courses.push(...data.courses);
-  }
+  await executeInBatches();
 
   const cityName = Locations.find((l) => l.subdomain === city)?.name;
 

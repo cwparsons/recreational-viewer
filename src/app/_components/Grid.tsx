@@ -1,22 +1,12 @@
 'use client';
 
-import { Course } from '@/types/CoursesV2Response';
 import { AgGridReact } from 'ag-grid-react';
-import { ColDef, ColGroupDef } from '@ag-grid-community/core';
-import { themeQuartz } from '@ag-grid-community/theming';
+import { ColDef, ColGroupDef } from 'ag-grid-community';
 
-const theme = themeQuartz.withParams({
-  backgroundColor: '#1f2836',
-  browserColorScheme: 'dark',
-  chromeBackgroundColor: {
-    ref: 'foregroundColor',
-    mix: 0.07,
-    onto: 'backgroundColor',
-  },
-  fontFamily: 'inherit',
-  foregroundColor: '#FFF',
-  headerFontSize: 14,
-});
+import 'ag-grid-community/styles/ag-grid.css';
+import 'ag-grid-community/styles/ag-theme-quartz.css';
+
+import { type Course } from '@/types/CoursesV2Response';
 
 type GridProps = {
   city: string;
@@ -32,8 +22,6 @@ function getFacilityLocation(course: Course) {
 }
 
 export const Grid = ({ city, courses }: GridProps) => {
-  console.log(courses[0]);
-
   const rowData = courses.map((course) => ({
     ...course,
     OccurrenceMinStartDate: new Date(course.OccurrenceMinStartDate),
@@ -44,7 +32,7 @@ export const Grid = ({ city, courses }: GridProps) => {
     spots: course.BookButtonText === 'Closed' ? 'Closed' : course.Spots || 'N/A',
   }));
 
-  const columnDefs: (ColDef | ColGroupDef)[] = [
+  const columnDefs: (ColDef<(typeof rowData)[number]> | ColGroupDef<(typeof rowData)[number]>)[] = [
     {
       headerName: 'Name',
       field: 'EventName',
@@ -126,15 +114,11 @@ export const Grid = ({ city, courses }: GridProps) => {
       type: 'fitCellContents',
       defaultMinWidth: 100,
     },
-  };
+  } as const;
 
   return (
-    <AgGridReact
-      gridOptions={gridOptions}
-      rowData={rowData}
-      columnDefs={columnDefs.map((c) => ({ ...c, filter: true }))}
-      defaultColDef={{ flex: 1, minWidth: 100 }}
-      theme={theme}
-    />
+    <div className="h-full ag-theme-quartz-auto-dark">
+      <AgGridReact gridOptions={gridOptions} rowData={rowData} columnDefs={columnDefs} defaultColDef={{ filter: true }} />
+    </div>
   );
 };
