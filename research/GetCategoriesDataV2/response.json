@@ -1,0 +1,2236 @@
+[
+  {
+    "Name": "*Registered Visits",
+    "OriginalName": "*Registered Visits",
+    "ShowCalendarCategory": true,
+    "Calendars": [
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=1af5bfef-def5-4cfc-b9ef-96f1774033fb\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "1af5bfef-def5-4cfc-b9ef-96f1774033fb",
+        "Name": "Cambie Community Centre",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=33432cd1-2b40-458f-972d-b0ae107c36a9\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "33432cd1-2b40-458f-972d-b0ae107c36a9",
+        "Name": "City Centre Community Centre",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "524709c2-d376-4985-b733-873ea6e167ee",
+        "Name": "Hamilton Community Centre",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=5bc32e4a-6607-47f5-8513-53b2dbc4f83e\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "5bc32e4a-6607-47f5-8513-53b2dbc4f83e",
+        "Name": "Minoru Arenas",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=5c2d76e9-8d5b-432a-80f6-799b181865d9\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "5c2d76e9-8d5b-432a-80f6-799b181865d9",
+        "Name": "Minoru Centre for Active Living",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=8bd697eb-ee1e-4067-b6bb-be1901a7753d\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "8bd697eb-ee1e-4067-b6bb-be1901a7753d",
+        "Name": "Richmond Ice Centre",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=98399b68-ade0-4c6c-a81c-662a9922e001\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "98399b68-ade0-4c6c-a81c-662a9922e001",
+        "Name": "Sea Island Community Centre",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=ac9702d7-d17e-47c2-8a3d-5bc92a7afdf3\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "ac9702d7-d17e-47c2-8a3d-5bc92a7afdf3",
+        "Name": "South Arm Community Centre",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "15fc4c2e-a95a-43fd-bbe0-9979cfe33d68",
+        "Name": "South Arm Community Park",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=5028a8d1-d493-4d5d-8c36-a86f58fee00b\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "5028a8d1-d493-4d5d-8c36-a86f58fee00b",
+        "Name": "Steveston Community Centre",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=35cd8d3d-772b-48b7-bc0b-5c79303b390e\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "35cd8d3d-772b-48b7-bc0b-5c79303b390e",
+        "Name": "Thompson Community Centre",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "9fe4bea6-32d9-4cbe-b202-8045ceaa6a28",
+        "Name": "Watermania",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=2edb7056-a457-486d-8987-2fd3692c2e46\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "2edb7056-a457-486d-8987-2fd3692c2e46",
+        "Name": "West Richmond Community Centre",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "Name": "55+yrs",
+    "OriginalName": "55+yrs",
+    "ShowCalendarCategory": true,
+    "Calendars": [
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=3401d95d-27cc-43a7-8f86-054fb1b6c447\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "3401d95d-27cc-43a7-8f86-054fb1b6c447",
+        "Name": "Arena - Curling",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=481f7131-62b4-4378-a450-2904f7e9b41c\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "481f7131-62b4-4378-a450-2904f7e9b41c",
+        "Name": "Arts - Dance",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=32d6404d-0616-4ce0-8d7d-93d4af0dee62\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "32d6404d-0616-4ce0-8d7d-93d4af0dee62",
+        "Name": "Arts - Music",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=75844b39-6afe-40f0-bc45-22b15a22976c\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "75844b39-6afe-40f0-bc45-22b15a22976c",
+        "Name": "Arts - Performing",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=1e899b93-67ee-409e-9ff0-c72f3c5e4ca8\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "1e899b93-67ee-409e-9ff0-c72f3c5e4ca8",
+        "Name": "Arts - Visual",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=5817cfe5-a97f-42af-9311-e195037d505c\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "5817cfe5-a97f-42af-9311-e195037d505c",
+        "Name": "Computers, Technology and Social Media",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=0de7d453-1548-47b8-9584-5c91f37db642\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "0de7d453-1548-47b8-9584-5c91f37db642",
+        "Name": "Cooking",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=2f0514c0-0122-42bf-a695-e74b0ee3f5ac\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "2f0514c0-0122-42bf-a695-e74b0ee3f5ac",
+        "Name": "Events and Seasonal Programs",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=594230ef-1a10-4a98-92ae-4341cdfa12b3\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "594230ef-1a10-4a98-92ae-4341cdfa12b3",
+        "Name": "Fitness",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=bf58cde3-3e04-42eb-a956-ba060b077c66\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "bf58cde3-3e04-42eb-a956-ba060b077c66",
+        "Name": "Gardening",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=712e5f02-93a6-489d-b036-c53de4104db6\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "712e5f02-93a6-489d-b036-c53de4104db6",
+        "Name": "General Interest",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=62d67f7a-db77-48cc-afe7-c84ba56ca2f8\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "62d67f7a-db77-48cc-afe7-c84ba56ca2f8",
+        "Name": "Health and Wellness",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "6cf5e9b1-f6af-4a96-acde-c0128da6a825",
+        "Name": "Heritage",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=618953f7-4069-4106-85bb-030381c2471c\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "618953f7-4069-4106-85bb-030381c2471c",
+        "Name": "Languages",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=77f334b8-1463-445c-b615-ab354b925a90\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "77f334b8-1463-445c-b615-ab354b925a90",
+        "Name": "Luncheons and Dinners",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=4f7f6ae1-db21-4152-9930-a6252ee8a9d4\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "4f7f6ae1-db21-4152-9930-a6252ee8a9d4",
+        "Name": "Martial Arts",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=facd6fcb-c141-4fe9-9b3b-2672a85fa332\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "facd6fcb-c141-4fe9-9b3b-2672a85fa332",
+        "Name": "Online - Programs",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=d81eca5a-a32d-4f89-ac86-b16f22665823\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "d81eca5a-a32d-4f89-ac86-b16f22665823",
+        "Name": "Out Trips and Tours",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=64696d69-8197-4e3b-8f2c-0c462283e6f2\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "64696d69-8197-4e3b-8f2c-0c462283e6f2",
+        "Name": "Racquet Sports",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=ed524b91-d339-4073-82b5-5737be03e8b3\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "ed524b91-d339-4073-82b5-5737be03e8b3",
+        "Name": "Sports",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=37ab9d75-d8d4-4095-af34-131f52468869\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "37ab9d75-d8d4-4095-af34-131f52468869",
+        "Name": "Wellness Clinics",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "Name": "Adults (19+yrs)",
+    "OriginalName": "Adults (19+yrs)",
+    "ShowCalendarCategory": true,
+    "Calendars": [
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=a9c8c9e4-2518-4fe9-a9f2-a2b330bb6ea4\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "a9c8c9e4-2518-4fe9-a9f2-a2b330bb6ea4",
+        "Name": "Aquafit",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=37971d59-973a-45b6-8894-f542abbc9128\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "37971d59-973a-45b6-8894-f542abbc9128",
+        "Name": "Aquatics",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=462e6cd8-86f9-4eea-97e4-bb017ac224b6\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "462e6cd8-86f9-4eea-97e4-bb017ac224b6",
+        "Name": "Arenas - Curling",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=08c56c84-5ee7-4c81-9d52-d4cfc850aad7\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "08c56c84-5ee7-4c81-9d52-d4cfc850aad7",
+        "Name": "Arenas - Skating",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=4dddc286-5202-44ee-9d88-daf33ff717c9\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "4dddc286-5202-44ee-9d88-daf33ff717c9",
+        "Name": "Arts - Dance",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=15648aa3-8e85-4e71-9699-4ec29ad23f73\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "15648aa3-8e85-4e71-9699-4ec29ad23f73",
+        "Name": "Arts - Digital",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=47fb2465-7a8d-42ff-aefb-c4869cf71ae2\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "47fb2465-7a8d-42ff-aefb-c4869cf71ae2",
+        "Name": "Arts - Music",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=52884791-8e50-4017-8271-ce1bdc7b8b50\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "52884791-8e50-4017-8271-ce1bdc7b8b50",
+        "Name": "Arts - Performing",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=84e192f6-3ea8-440e-83fa-6fda027ec971\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "84e192f6-3ea8-440e-83fa-6fda027ec971",
+        "Name": "Arts - Visual",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "85032340-9c47-4c74-9bbc-4f44ae4fe4b0",
+        "Name": "Cooking",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "6ccc2221-b137-4e67-bcf5-5cc44a9008f1",
+        "Name": "Environmental Sustainability",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=4d43804f-e589-4acf-98db-28e7e2ade254\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "4d43804f-e589-4acf-98db-28e7e2ade254",
+        "Name": "Events and Seasonal Programs",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=62408323-3633-4ca2-adf7-60b040feb96f\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "62408323-3633-4ca2-adf7-60b040feb96f",
+        "Name": "First Aid",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=c9c25bd4-9715-4ffb-8bf6-d305225c92a0\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=c9c25bd4-9715-4ffb-8bf6-d305225c92a0\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False\u0026sessionsMode=True",
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "c9c25bd4-9715-4ffb-8bf6-d305225c92a0",
+        "Name": "Fitness",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "68d6379c-2da9-4bbf-9f42-7ec9af03099c",
+        "Name": "Gardening",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=469614c5-5d5e-421f-9c17-049d755560aa\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "469614c5-5d5e-421f-9c17-049d755560aa",
+        "Name": "General Interest",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=464fdf3f-48c1-4fc7-9aae-500ef2fe0fd9\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "464fdf3f-48c1-4fc7-9aae-500ef2fe0fd9",
+        "Name": "Health and Wellness",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "e650909d-7c5b-46f1-89ba-4d31f9569a88",
+        "Name": "Heritage",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=ec274a01-d533-4d06-b7e1-a911edf02e73\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "ec274a01-d533-4d06-b7e1-a911edf02e73",
+        "Name": "Languages",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=32d6b908-7430-453d-a5bd-a19e2d0411ea\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "32d6b908-7430-453d-a5bd-a19e2d0411ea",
+        "Name": "Martial Arts",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "b8b867ca-2ab0-4000-a3a8-b9b30b6ad87e",
+        "Name": "Nature and Science",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=a50f595d-9493-4188-8967-b9530e1fd81f\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=a50f595d-9493-4188-8967-b9530e1fd81f\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False\u0026sessionsMode=True",
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "a50f595d-9493-4188-8967-b9530e1fd81f",
+        "Name": "Online - Programs",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "d174c2b1-4947-4861-9945-5b1a4c665e01",
+        "Name": "Out Trips and Tours",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=216322b4-e3e3-4da0-834b-959989980eb8\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "216322b4-e3e3-4da0-834b-959989980eb8",
+        "Name": "Racquet Sports",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=b3c37660-152b-4b17-9b2b-046772d319c2\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=b3c37660-152b-4b17-9b2b-046772d319c2\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False\u0026sessionsMode=True",
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "b3c37660-152b-4b17-9b2b-046772d319c2",
+        "Name": "Sports",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "Name": "Camps",
+    "OriginalName": "Camps",
+    "ShowCalendarCategory": true,
+    "Calendars": [
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=17a44143-25f4-4d94-8100-22eb7de0204b\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "17a44143-25f4-4d94-8100-22eb7de0204b",
+        "Name": "Children",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=eebf133e-f56e-4782-bf67-17877093e87f\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "eebf133e-f56e-4782-bf67-17877093e87f",
+        "Name": "Preschool",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=10472f5b-3be6-4dae-bd73-c0dfef3e09e7\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "10472f5b-3be6-4dae-bd73-c0dfef3e09e7",
+        "Name": "Youth",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "Name": "Children (6-12yrs)",
+    "OriginalName": "Children (6-12yrs)",
+    "ShowCalendarCategory": true,
+    "Calendars": [
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=41242a1a-0355-4cee-91bb-b7f38afb4133\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "41242a1a-0355-4cee-91bb-b7f38afb4133",
+        "Name": "Aquatics",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=af28e8e1-95f7-4590-92da-958298fbd5e4\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "af28e8e1-95f7-4590-92da-958298fbd5e4",
+        "Name": "Arenas - Curling",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=5dd3ff0f-8d35-4937-9aa9-e14fe405f1db\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "5dd3ff0f-8d35-4937-9aa9-e14fe405f1db",
+        "Name": "Arenas - Skating",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=7644456b-b10e-4a6a-aa28-09f4b383cdfd\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "7644456b-b10e-4a6a-aa28-09f4b383cdfd",
+        "Name": "Arts - Dance",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=61202009-4c6f-4c28-91c9-b63b3bb75b84\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "61202009-4c6f-4c28-91c9-b63b3bb75b84",
+        "Name": "Arts - Digital",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=4dc7113d-156f-4b98-8c5a-d8736de3ba68\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "4dc7113d-156f-4b98-8c5a-d8736de3ba68",
+        "Name": "Arts - Music",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=cb51ba77-0321-44b6-91d1-e0965169678d\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "cb51ba77-0321-44b6-91d1-e0965169678d",
+        "Name": "Arts - Performing",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=880ed629-f1b1-4027-8350-85e74ba4d76a\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "880ed629-f1b1-4027-8350-85e74ba4d76a",
+        "Name": "Arts - Visual",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=893473f1-25fe-403b-be4d-6ff115e9febf\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "893473f1-25fe-403b-be4d-6ff115e9febf",
+        "Name": "Birthday Parties",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=218d7608-9856-42be-bf96-5a0c59c13625\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "218d7608-9856-42be-bf96-5a0c59c13625",
+        "Name": "Childcare",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=f2b4b529-976c-40dc-b3ee-e37daa087fc2\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "f2b4b529-976c-40dc-b3ee-e37daa087fc2",
+        "Name": "Computers, Technology and Social Media",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=45a0b503-3c1e-41fb-8a0d-6d0cd9f3b163\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "45a0b503-3c1e-41fb-8a0d-6d0cd9f3b163",
+        "Name": "Cooking",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=6a88fec0-e5f1-4531-96dd-029d9dbe4f90\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "6a88fec0-e5f1-4531-96dd-029d9dbe4f90",
+        "Name": "Events and Seasonal Programs",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=f924b37e-402d-4772-8941-e44b7b313058\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "f924b37e-402d-4772-8941-e44b7b313058",
+        "Name": "Fitness",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=4eccdb26-3d59-4fff-8db6-53c38e5e8f48\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "4eccdb26-3d59-4fff-8db6-53c38e5e8f48",
+        "Name": "General Interest",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "8fb3ceaf-5ebf-4fc8-8694-ff141eb55fd8",
+        "Name": "Heritage",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "f8de8d55-16d6-43b4-8209-8c2e1f1c709a",
+        "Name": "Languages",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=4e44ef63-8c72-4b9a-b9f1-5f27b95a35ae\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "4e44ef63-8c72-4b9a-b9f1-5f27b95a35ae",
+        "Name": "Martial Arts",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=19d2849b-15c7-4a8e-b66d-a2aafa75f3f0\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "19d2849b-15c7-4a8e-b66d-a2aafa75f3f0",
+        "Name": "Nature and Science",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "95530e00-a542-4ff0-9796-f3086d177306",
+        "Name": "Online - Programs",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "e63ca0d8-0583-4665-8f0a-d7f672dbf91f",
+        "Name": "Out Trips and Tours",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=125f58d0-c963-498a-b8df-f1d45850d366\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "125f58d0-c963-498a-b8df-f1d45850d366",
+        "Name": "Racquet Sports",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=80fd179d-4560-48e7-9f7c-9c59b7568e8d\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "80fd179d-4560-48e7-9f7c-9c59b7568e8d",
+        "Name": "Sports",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "Name": "Plant Sales",
+    "OriginalName": "Plant Sales",
+    "ShowCalendarCategory": true,
+    "Calendars": [
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "19fc642d-f2b7-4845-99cd-4e82cefce070",
+        "Name": "Tree Sales",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "377e0c9c-fa5a-4d56-b1e6-4a0fb398679d",
+        "Name": "Tulip Bulbs (Assorted)",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "Name": "Preschoolers (0-5yrs)",
+    "OriginalName": "Preschoolers (0-5yrs)",
+    "ShowCalendarCategory": true,
+    "Calendars": [
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=d10da878-da39-4baa-abb4-92e099d47d2f\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "d10da878-da39-4baa-abb4-92e099d47d2f",
+        "Name": "Aquatics",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=98407ce3-61c0-4a68-87ac-a8b5dfed1cc2\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "98407ce3-61c0-4a68-87ac-a8b5dfed1cc2",
+        "Name": "Arenas - Skating",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=58e8890c-f1e1-4743-80d5-d25351078aa1\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "58e8890c-f1e1-4743-80d5-d25351078aa1",
+        "Name": "Arts - Dance",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=d04e7c40-a1c8-4afb-8f28-19fbfa6b6a42\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "d04e7c40-a1c8-4afb-8f28-19fbfa6b6a42",
+        "Name": "Arts - Music",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=2aff77d3-d8fb-47e4-a729-b4d8aa71951b\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "2aff77d3-d8fb-47e4-a729-b4d8aa71951b",
+        "Name": "Arts - Performing",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=88eb3384-7c80-47cf-9dec-fdaf7b9ae066\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "88eb3384-7c80-47cf-9dec-fdaf7b9ae066",
+        "Name": "Arts - Visual",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "f6fc640b-8b1d-4fc1-a149-e14b3530d22d",
+        "Name": "Events and Seasonal Programs",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=130261a0-d3a7-4769-b62a-8e54595e44ef\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "130261a0-d3a7-4769-b62a-8e54595e44ef",
+        "Name": "Fitness",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=d54f5498-d3de-4d2c-a259-7a0fc4c6be0e\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "d54f5498-d3de-4d2c-a259-7a0fc4c6be0e",
+        "Name": "General Interest",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=25280ae4-e6f0-4439-9d07-813b81aa5f75\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "25280ae4-e6f0-4439-9d07-813b81aa5f75",
+        "Name": "Languages",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=a9d3ebf8-746a-4b73-8459-a8d8b01325a9\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "a9d3ebf8-746a-4b73-8459-a8d8b01325a9",
+        "Name": "Nature and Science",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=66f03fc0-4a76-4f55-ab4d-dc42631f8de1\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "66f03fc0-4a76-4f55-ab4d-dc42631f8de1",
+        "Name": "Preschool",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=932eca5b-a3cb-4c64-b8ed-26ad534150a8\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "932eca5b-a3cb-4c64-b8ed-26ad534150a8",
+        "Name": "Racquet Sports",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=88ade48c-35d7-4767-8acb-66bc492bbc1d\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "88ade48c-35d7-4767-8acb-66bc492bbc1d",
+        "Name": "Sports",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "Name": "Youth (13-18yrs)",
+    "OriginalName": "Youth (13-18yrs)",
+    "ShowCalendarCategory": true,
+    "Calendars": [
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=5576ee75-9c61-44fb-ae45-ffd3c54607bd\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "5576ee75-9c61-44fb-ae45-ffd3c54607bd",
+        "Name": "Aquatics",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=1f8316b8-c396-434b-9dd1-fac519e3ba42\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "1f8316b8-c396-434b-9dd1-fac519e3ba42",
+        "Name": "Arenas",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=4103c96a-527c-407e-9c95-12189930430a\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "4103c96a-527c-407e-9c95-12189930430a",
+        "Name": "Arts - Dance",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=c7ac6a47-333c-4a37-ac0f-c7756bbe5741\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "c7ac6a47-333c-4a37-ac0f-c7756bbe5741",
+        "Name": "Arts - Digital",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=bdb52a1d-f175-4fd4-935c-288d1950076a\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "bdb52a1d-f175-4fd4-935c-288d1950076a",
+        "Name": "Arts - Music",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "86ec1273-4404-404b-8d03-6a50561460ad",
+        "Name": "Arts - Performing",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=711820ab-5ba3-4b30-b75e-8a370080b395\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "711820ab-5ba3-4b30-b75e-8a370080b395",
+        "Name": "Arts - Visual",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=3bff7431-4f20-4d7e-aa1b-4ab90ffa51f7\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "3bff7431-4f20-4d7e-aa1b-4ab90ffa51f7",
+        "Name": "Computers, Technology and Social Media",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=2b58f760-7d38-4c81-91d5-c82e6183e894\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "2b58f760-7d38-4c81-91d5-c82e6183e894",
+        "Name": "Cooking",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/Classes?calendarId=9a48f8e3-09e3-45f3-bbe4-ca970d4eafd3\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 2,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "9a48f8e3-09e3-45f3-bbe4-ca970d4eafd3",
+        "Name": "Events and Seasonal Programs",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "22502866-570c-4c9f-a7e7-e627070dcfe7",
+        "Name": "First Aid",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=4382eaec-e35b-4c24-a7c1-0d094b3e5ede\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "4382eaec-e35b-4c24-a7c1-0d094b3e5ede",
+        "Name": "Fitness",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=f8c9d8ef-86dd-4257-a70f-45751f3c4e20\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "f8c9d8ef-86dd-4257-a70f-45751f3c4e20",
+        "Name": "General Interest",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "8ba45810-1ffd-45f3-80ee-72dbb1ec3c59",
+        "Name": "Health and Wellness",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=977a552a-6b05-4cf2-bf69-d25863ec4ec7\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "977a552a-6b05-4cf2-bf69-d25863ec4ec7",
+        "Name": "Martial Arts",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=5dbc6901-ee63-45b1-9f31-57ffec804f0c\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "5dbc6901-ee63-45b1-9f31-57ffec804f0c",
+        "Name": "Nature and Science",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": null,
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "00560e83-02bd-40f7-9e86-1ade78f4433c",
+        "Name": "Online - Programs",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=6ada779a-0408-4168-a615-a978bc975a3b\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "6ada779a-0408-4168-a615-a978bc975a3b",
+        "Name": "Out Trips and Tours",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=ee278dfe-2310-4748-b9c3-033eeaf59c9f\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "ee278dfe-2310-4748-b9c3-033eeaf59c9f",
+        "Name": "Racquet Sports",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "Items": [],
+        "Category": null,
+        "BookingLink": "/23650/Clients/BookMe4BookingPages/BookingCoursesPage?calendarId=9ccdb916-820f-4f15-bb76-eabdfb557496\u0026widgetId=15f6af07-39c5-473e-b053-96653f77a406\u0026embed=False",
+        "MakeupBookingLink": null,
+        "BookingTypeInfo": {
+          "BookingType": 3,
+          "IsSchoolProgram": false,
+          "IsCustomBookingOnline": false,
+          "IsCustomBookingAdmin": false,
+          "IsCustomBooking": false
+        },
+        "AssignedServices": null,
+        "PreventDuplicateBookingWithinEventGroup": false,
+        "Id": "9ccdb916-820f-4f15-bb76-eabdfb557496",
+        "Name": "Sports",
+        "EventObjectId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  }
+]

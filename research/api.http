@@ -1,0 +1,43 @@
+# Richmond
+@subdomain = richmondcity
+@client = 23650
+
+# New Westminster
+# @subdomain = cityofnewwestminster
+# @client = 23693
+
+# @todo Investigate what this is for.
+@widgetId = 15f6af07-39c5-473e-b053-96653f77a406
+
+# Aquatics
+@calendarId = d10da878-da39-4baa-abb4-92e099d47d2f
+
+
+###
+# BookMe4V2/GetCategoriesDataV2
+###
+
+POST https://{{subdomain}}.perfectmind.com/Clients/BookMe4V2/GetCategoriesDataV2
+
+
+###
+# BookMe4BookingPagesV2/EventFilterGroupsV2
+# @param calendarId
+# @param widgetId
+###
+
+GET https://{{subdomain}}.perfectmind.com/{{client}}/Clients/BookMe4BookingPagesV2/EventFilterGroupsV2?calendarId={{calendarId}}&widgetId={{widgetId}}
+
+
+###
+# BookMe4BookingPagesV2/CoursesV2
+###
+
+POST https://{{subdomain}}.perfectmind.com/Clients/BookMe4BookingPagesV2/CoursesV2
+Content-Type: application/json
+
+{
+	"calendarId": "{{calendarId}}",
+	"page": "0",
+	"bookingMode": "0"
+}

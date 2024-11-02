@@ -1,0 +1,2066 @@
+{
+  "filterGroups": [
+    {
+      "GroupName": "Keyword",
+      "GroupPluralName": null,
+      "FilterGroupOrder": null,
+      "FilterGroupKind": 9,
+      "Values": [
+        {
+          "Name": "Keyword",
+          "ReadableName": null,
+          "Value": null,
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 9,
+          "Children": null
+        }
+      ],
+      "Visible": false
+    },
+    {
+      "GroupName": "Location",
+      "GroupPluralName": "All Locations",
+      "FilterGroupOrder": null,
+      "FilterGroupKind": 5,
+      "Values": [
+        {
+          "Name": "Main Region",
+          "ReadableName": null,
+          "Value": "00000000-0000-0000-0000-000000000000",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 5,
+          "Children": [
+            {
+              "Name": "Agassiz Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "ab6bde1c-8e4d-4e2d-8bc4-a4bed6042f5d",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Airey Park",
+              "ReadableName": null,
+              "Value": "d3515ec0-22cb-40dd-a4a5-c2b430ff22fe",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Alexandra Park",
+              "ReadableName": null,
+              "Value": "d59ed63e-5aec-4d32-a2fa-a1c133ebe2b2",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Anderson Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "a4998b12-c79f-48d1-a1aa-063df282be65",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Anderson School",
+              "ReadableName": null,
+              "Value": "bf8f8308-0ad4-4414-ae46-0e8e966903d9",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Bike Terrain Park",
+              "ReadableName": null,
+              "Value": "086316e6-93bc-4c90-9e3d-738febb66d9c",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Birch Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "824c35d9-0176-4f92-a611-05feda3d3780",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Blair School",
+              "ReadableName": null,
+              "Value": "9c3f7be8-7b73-4701-a871-fa3e7f656e27",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Blundell Elementary",
+              "ReadableName": null,
+              "Value": "a04a5bff-badc-4ff6-a3ce-a0b161319d6d",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Blundell Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "30e7b015-71a1-446d-873c-cfbd6882b2e0",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Boyd School",
+              "ReadableName": null,
+              "Value": "b84eb5ca-7652-419d-a9d0-9b255e8583da",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Branscombe House",
+              "ReadableName": null,
+              "Value": "7de40208-d503-4c8c-8341-948ed7c695d5",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Bridge Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "07077deb-9fe6-4229-8f2e-0eeb90109b8a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Bridge School",
+              "ReadableName": null,
+              "Value": "ebd0ce86-dcdf-425a-a91b-bf69b2d21268",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Bridgeport Industrial Park",
+              "ReadableName": null,
+              "Value": "e5664dee-b684-404a-9272-e10ff0de6d4f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Brighouse Elementary",
+              "ReadableName": null,
+              "Value": "78ea3992-56a5-46fc-bc86-0f00e3ef85a2",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Brighouse Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "b1aedc74-5aa8-4283-b9e4-be88ba23cc44",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Brighouse Park",
+              "ReadableName": null,
+              "Value": "e8871bfd-9c92-41b8-b68c-7b50f5505e76",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Brighouse School",
+              "ReadableName": null,
+              "Value": "adcc9515-8b5c-4c95-a6ab-ee83ef803153",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Britannia Shipyards",
+              "ReadableName": null,
+              "Value": "409b5d21-82f4-4b62-a142-7229be8abfad",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Burkeville Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "0ba37afb-047c-493a-887f-e6b2496dde5a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Burnett School",
+              "ReadableName": null,
+              "Value": "7dd79947-63fd-4d55-9652-4fd1658a2b0f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Burnett/Thompson Community Park",
+              "ReadableName": null,
+              "Value": "5c299f5b-36e5-4fde-920c-4d7d2240521f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Byng Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "c2161e05-055e-4f54-b296-ed63d3e86e0a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Byng School",
+              "ReadableName": null,
+              "Value": "a67f9a53-4ef5-4d67-beac-8181e33e6dda",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Cambie Community Centre",
+              "ReadableName": null,
+              "Value": "d17f3c57-ce6a-428e-b61d-3ffc150af47f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Cambie Field Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "a53cc431-7343-42c6-842c-712718c26454",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Cambie School",
+              "ReadableName": null,
+              "Value": "2ea713b0-23ef-430c-9edf-46022ddabb0e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "City Centre Community Centre",
+              "ReadableName": null,
+              "Value": "56105db1-77eb-43fd-bcb0-9c6ef1d35675",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "City Hall",
+              "ReadableName": null,
+              "Value": "5a461873-149d-4d5d-9eaf-73f8bfcb76da",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Community Garden - Gilbert Road",
+              "ReadableName": null,
+              "Value": "06bde382-e441-462b-88bf-9aa6b91afe5e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Community Garden - Railway Avenue",
+              "ReadableName": null,
+              "Value": "05890133-0d54-40c0-a826-badccd6a1d71",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Community Garden - River Road",
+              "ReadableName": null,
+              "Value": "35b17104-3870-4c3e-8656-d285c6275de6",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Community Garden - Terra Nova Rural Park",
+              "ReadableName": null,
+              "Value": "9c8c0b72-373c-4361-beb6-0f8f794b7f26",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Cook Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "62b73860-71f2-4c20-9b90-2b78dc052226",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Cook School",
+              "ReadableName": null,
+              "Value": "f5d9cf4a-ec4f-4186-add7-d822440d78ca",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Debeck Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "8054b060-e8d0-444e-b658-ad88e24d0bd4",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Debeck School",
+              "ReadableName": null,
+              "Value": "7c9617dc-0870-4923-9ca4-6a7a80fa0602",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Diefenbaker Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "00e34978-f4a4-4e93-97c5-cd0de1090c78",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Diefenbaker School",
+              "ReadableName": null,
+              "Value": "80660462-b785-4dd0-88a3-3d8a822bf30e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Dixon Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "c7b586e8-b85d-4c16-bc82-e540b0cadd1e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Dixon School",
+              "ReadableName": null,
+              "Value": "5f691566-839f-4cda-a22a-4f534252950d",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Dolphin Park",
+              "ReadableName": null,
+              "Value": "92ef82b7-379c-4972-962c-92dce2c4b4ac",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Dover Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "a1cbbf99-c43b-4b9c-beba-9d115e4a51c9",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "East Richmond Community Hall",
+              "ReadableName": null,
+              "Value": "eb33f369-9ff8-4028-b083-b2ba130c8cdd",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "East Richmond Neighbourhood School Park ",
+              "ReadableName": null,
+              "Value": "3d08b233-f7ee-4b62-a19e-e671e1340d48",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Errington Elementary School",
+              "ReadableName": null,
+              "Value": "131edc2c-c52e-4968-ab30-fac71c81c02a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Errington Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "86d8e3c5-0383-487e-801c-fb4fcc848ca1",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Ferris Elementary School",
+              "ReadableName": null,
+              "Value": "4e342a6d-7ebe-41ec-a251-a51420c4d1b5",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Ferris Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "1df14c6f-a104-4d4a-9d2d-2187669e8dc7",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Fifth Ave Road End Neighbourhood Park   ",
+              "ReadableName": null,
+              "Value": "6c1f3a22-b389-4176-a917-b1bb1979092a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Flight Path Park",
+              "ReadableName": null,
+              "Value": "32c0349c-bc67-4fee-8158-d05b481bbe43",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Fraserwood Park",
+              "ReadableName": null,
+              "Value": "705404ca-5b3d-4028-8bbf-7feb8078667a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Garden City Community Park",
+              "ReadableName": null,
+              "Value": "cdff98be-3372-428f-90b3-e7105b4b51b1",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Garden City Lands",
+              "ReadableName": null,
+              "Value": "6043f383-46e0-4bb9-93e5-99f70d458f0a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Garden City Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "e8f02573-11b3-49c5-b437-46dfe69e6076",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Garden City School    ",
+              "ReadableName": null,
+              "Value": "009fe13d-b3dc-43db-8c03-c68cc77e2a86",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Garnet Tot Lot Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "8a9700a0-cc8e-4d67-b210-8553b8ddca3f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Garratt Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "952c4475-e749-401d-9f63-c10c83158819",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Garratt Wellness Centre",
+              "ReadableName": null,
+              "Value": "d0af21b3-0931-47d9-94e8-d7b1140598a3",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Garry Point Park",
+              "ReadableName": null,
+              "Value": "17335d00-297a-4657-b179-f04e1ff9a4b5",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Gateway Theatre",
+              "ReadableName": null,
+              "Value": "ee86700d-f3b8-4535-b836-b0e10c3b4ab4",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "General Currie Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "27e83301-f261-4f0b-b335-698d4f80b199",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "General Currie School",
+              "ReadableName": null,
+              "Value": "ef96c450-0523-4530-8e42-3b6224e14134",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Gibbons VLA Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "839cc36f-708c-4c86-b28b-e567e8cd4326",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Gilmore Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "224b0bed-a65d-4c76-8ad9-bd4a9e9891c2",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Gilmore School",
+              "ReadableName": null,
+              "Value": "e84c94b7-ab05-4573-9c85-2a99fb6597c5",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Grauer Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "04b06590-5171-4c98-ab32-f5b7db6acfb5",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Grauer School",
+              "ReadableName": null,
+              "Value": "8633536f-a968-4b8a-86f1-060a0d7bb612",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Great West Cannery Park",
+              "ReadableName": null,
+              "Value": "c392ffd6-4832-426b-9fb1-0b910161a654",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Hamilton Community Centre",
+              "ReadableName": null,
+              "Value": "d4cfdc7b-5c90-4e30-9d3f-2e34d264a906",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Hamilton Community Park",
+              "ReadableName": null,
+              "Value": "d76fa97b-aab0-46c8-9086-20848d08ee1a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Hamilton Fire Hall",
+              "ReadableName": null,
+              "Value": "40bdaee3-577f-441b-bb1e-2c96b990a2f5",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Hamilton Highway Park",
+              "ReadableName": null,
+              "Value": "f6e09b50-08e5-43ae-a8ac-c537dbcd08e0",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Hamilton VLA Park",
+              "ReadableName": null,
+              "Value": "95ce8a26-6baa-4102-b329-53881e5fd35e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Heather/Dolphin Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "ec0cd3a6-1962-4468-979e-f2630f28dbe4",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Homma Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "402b5621-057d-4b00-bd61-849f53941b03",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Homma School",
+              "ReadableName": null,
+              "Value": "be5680b5-bdb5-488a-925b-e3ff79da7745",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Honda Park",
+              "ReadableName": null,
+              "Value": "3f57b05e-8304-4c03-a59a-8609733a04bd",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Hugh Boyd Community Park",
+              "ReadableName": null,
+              "Value": "39a0224d-6df9-4f62-87cb-08ba7403f67f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Imperial Landing Park",
+              "ReadableName": null,
+              "Value": "1b3519b6-aa44-439b-a6ed-504e113dab28",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Katsura Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "64cc640d-b555-4425-be8d-2195f02ad772",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Kidd Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "00122ceb-4447-489d-98be-6b7334141b0b",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Kilby Park",
+              "ReadableName": null,
+              "Value": "aeb6406d-d407-4a3e-a7d0-081239928eaf",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Kilgour Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "dc728328-bb6a-4768-8040-3cc52ba03ca5",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "King George/Cambie Community Park",
+              "ReadableName": null,
+              "Value": "38cd716c-0237-4fca-8947-656c5bbdf781",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Kingswood Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "54a6e05c-fd15-47a2-be15-550f7922aafb",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Kingswood School",
+              "ReadableName": null,
+              "Value": "f7f2ca72-6f2b-4d27-8643-cb1cc79027c6",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Kozier Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "b866b185-1b43-491a-97d3-ffa8afdbf243",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Lang Centre",
+              "ReadableName": null,
+              "Value": "7d7de031-7961-4986-ba7c-a983e93a64e6",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Lang/Saba Park",
+              "ReadableName": null,
+              "Value": "a9884d09-5ada-4837-916b-3149d2103d76",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Lee Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "b78d049a-2daa-432b-8b17-0a007c9d90e8",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Lee School",
+              "ReadableName": null,
+              "Value": "ad4250bd-e0ff-4e9a-8259-24f7db7acbcf",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Lee Slough",
+              "ReadableName": null,
+              "Value": "16802131-c265-4051-9279-7e3c2bb0eabf",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "London Heritage Farm",
+              "ReadableName": null,
+              "Value": "4d0cc80c-aaf9-4ac4-82ae-dea1c797e531",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "London Park",
+              "ReadableName": null,
+              "Value": "7c4a166f-f39e-4f57-9a77-160d00924b8d",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "London/Steveston Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "4acd2c48-a8a3-4fbe-a1e6-562c22dcebc3",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "MacNeill Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "774a8fc2-b3af-4492-b2e0-09a562fb5d3c",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "MacNeill Secondary School",
+              "ReadableName": null,
+              "Value": "5d888462-c492-49ec-b627-7613cb046447",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Maple Lane Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "1480107f-e01d-42f4-8f1d-2d235212817a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Mariners Village Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "eadbfbc5-87fa-43b7-80be-15978439f887",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Marrington (Amana) Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "de3e569b-0a8c-4843-9070-03733812e963",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McCallan Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "4161153f-52df-4cb1-bff1-0dc4d92f8753",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McDonald Beach Park",
+              "ReadableName": null,
+              "Value": "fc401944-7a7c-4e38-b93d-d4820dc8c481",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McKay Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "1e98dccc-e9c0-4d5e-a139-496e92a53b5f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McKay School",
+              "ReadableName": null,
+              "Value": "9f6b6122-9e9b-4930-9847-7fc0c84e7c3e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McKinney Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "74a84f59-5803-47d8-97a1-38332527f623",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McKinney School",
+              "ReadableName": null,
+              "Value": "3d058a71-03bd-459c-983f-40998a25d175",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McLean Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "c68abcea-9625-49b2-87fb-093a0fe9cfb8",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McMath Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "fd8597b9-42e7-434f-9b79-1d26f8fa95cf",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McMath School",
+              "ReadableName": null,
+              "Value": "22e375e3-e8c9-4c54-bc2c-b5d09e0ce0da",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McNair Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "e8f8889b-52d4-4958-809d-503524215f15",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McNair School",
+              "ReadableName": null,
+              "Value": "58ff94ed-ccfa-4c69-9c9d-8fe738b8e20a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McNeely School",
+              "ReadableName": null,
+              "Value": "f8a9cdb4-1d44-4bfe-a659-1e4afbfdce62",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "McRoberts School",
+              "ReadableName": null,
+              "Value": "76346870-4a05-4fe2-8dfc-e53254e49387",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Middle Arm Waterfront Park",
+              "ReadableName": null,
+              "Value": "57ee99b7-954e-47f3-996f-f8facca6d41d",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Miller Road Park",
+              "ReadableName": null,
+              "Value": "c79fac2a-51e5-486d-b276-23e10c208a8d",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Minoru Arenas",
+              "ReadableName": null,
+              "Value": "05442014-cc32-41d1-a2a9-e15ec60e11c7",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Minoru Centre for Active Living",
+              "ReadableName": null,
+              "Value": "e86d402e-3ff6-401b-8c95-ac181baff95f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Minoru Chapel",
+              "ReadableName": null,
+              "Value": "f9b9458c-ed82-4a64-a786-053717d45200",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Minoru Park",
+              "ReadableName": null,
+              "Value": "697b1359-5ca6-4369-803d-6037902346b7",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Minoru Sports Pavilion",
+              "ReadableName": null,
+              "Value": "fcc5dbd9-0fdc-429d-a0e7-888416995f2b",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Mitchell Island Pier",
+              "ReadableName": null,
+              "Value": "a7e6f9ee-aaa0-4f9e-af9e-4b4f28c966ee",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Mitchell Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "1348780b-1045-41b8-83d8-46e2b8e3b6d9",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Mitchell School",
+              "ReadableName": null,
+              "Value": "bccb3a38-8835-4122-a756-17a690a1a8ef",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Model Airplane Park",
+              "ReadableName": null,
+              "Value": "928e8e5c-bfa2-4976-b2a8-bdd85f7f6175",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Morris Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "19736816-c8cd-4cf8-9544-1c9fdb5342c6",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "No 2 Rd Pier Park",
+              "ReadableName": null,
+              "Value": "79ceb81d-72c4-4f02-bd8e-bec653a234be",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "No 3 Rd Pier Park",
+              "ReadableName": null,
+              "Value": "922e57bc-0240-4668-9ea2-5c957cc99e8b",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "No 7 Rd Pier Park",
+              "ReadableName": null,
+              "Value": "0c8d2148-536e-43f5-b1ef-894f8c31e290",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Northeast Bog Forest",
+              "ReadableName": null,
+              "Value": "00a91a6e-1f28-4d49-850b-38b0707e9c33",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Odlin Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "f77d5762-02fe-4e81-800a-831deb819593",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Odlinwood Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "25040840-c05f-4338-be43-6fb85ec7d2b7",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Palmer School",
+              "ReadableName": null,
+              "Value": "4c46b6c0-b018-4e95-8f16-7ff515e81165",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Palmer/Garden City Neighbour School Park",
+              "ReadableName": null,
+              "Value": "52f2f747-582a-4f1a-9b08-3c48202cb3aa",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Park Lane Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "53d1cfd7-f7f5-4df8-bbe0-b4096576cdd9",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Paulik Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "73873f20-a180-4d8a-9210-39ceb3db8f2b",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Quilchena Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "114ac7db-16d2-492d-a7a6-9e444479fb65",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Quilchena School",
+              "ReadableName": null,
+              "Value": "eab15100-d51c-45e1-ab03-3b9286c4f4ba",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Registration Call Centre",
+              "ReadableName": null,
+              "Value": "dcb53f99-fa4b-4129-ad5b-b627f55ab4f2",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Rentals and Parks",
+              "ReadableName": null,
+              "Value": "4234d289-4d45-4df2-a39e-5bd57736d2af",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Art Gallery",
+              "ReadableName": null,
+              "Value": "b2776c35-d3fc-4c82-a500-e4fe9f9354b8",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Arts Centre",
+              "ReadableName": null,
+              "Value": "c648321a-89a1-4e30-aa75-d216bbd9425a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Cultural Centre",
+              "ReadableName": null,
+              "Value": "10e3c892-d3b1-4f82-8d24-98e23e96b9f6",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Cultural Centre Annex",
+              "ReadableName": null,
+              "Value": "8cc77a95-60a4-41c9-aa23-6e8d58066e16",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Curling Club",
+              "ReadableName": null,
+              "Value": "414f881e-032e-468b-bf6d-933134989d25",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Fire-Rescue - #1 Fire Hall",
+              "ReadableName": null,
+              "Value": "07a743e8-5461-45d7-8e94-57303a4a770e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Fire-Rescue - #7 Fire Hall",
+              "ReadableName": null,
+              "Value": "6af6c012-ae24-4706-af9f-0d826a4bc176",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond High Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "040fc950-cc8e-4690-bf3b-a609bef3abfc",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond High School",
+              "ReadableName": null,
+              "Value": "f5371ecb-78a7-4dab-b543-4804cd2f13c6",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Ice Centre",
+              "ReadableName": null,
+              "Value": "47c273d0-f471-44b5-aa62-be9f15a3c58e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Museum",
+              "ReadableName": null,
+              "Value": "b5fbb86c-157f-4311-9081-6bf98ec570be",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Nature Park",
+              "ReadableName": null,
+              "Value": "1ceecf2d-808c-401c-a8fe-03ddae27b35f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Pitch \u0026 Putt Golf Course",
+              "ReadableName": null,
+              "Value": "875add15-91b5-406e-9a31-9e5d78474f71",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Richmond Street Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "c42285d8-a9d5-4a15-9f88-03afd201fb6a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Rideau Park",
+              "ReadableName": null,
+              "Value": "5fe6f3b9-04c3-4645-9e8c-f771ba915ab1",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Riverport Pier",
+              "ReadableName": null,
+              "Value": "e544163e-27e8-4ce3-ac11-5a2c6f26d34a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Sea Island Community Centre",
+              "ReadableName": null,
+              "Value": "2a1ef5f7-dbab-413f-a727-d99875368c5e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Sea Island Community Hall Neighbour Park",
+              "ReadableName": null,
+              "Value": "6114f869-deb2-4d62-a5a6-14865afd651c",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Sea Island Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "0e9ae542-c101-4853-9867-615cc231a2a2",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Sea Island School",
+              "ReadableName": null,
+              "Value": "cd131ae4-ed7b-44ee-9c39-e038da4d6af2",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Skateboard Park",
+              "ReadableName": null,
+              "Value": "8983ec6b-df58-4325-8eac-ea219a9bc29d",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "South Arm Community Centre",
+              "ReadableName": null,
+              "Value": "65325178-10c8-4a22-b3fa-102cf86c9d3e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "South Arm Community Hall",
+              "ReadableName": null,
+              "Value": "576c7c61-ecff-4af4-ac8d-d3d808b7b36b",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "South Arm Community Park",
+              "ReadableName": null,
+              "Value": "71f20db7-a4cd-43d9-bde7-a88abe4ae757",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "South Arm Outdoor Pool",
+              "ReadableName": null,
+              "Value": "59182353-ea97-45df-b79e-5269d800fee2",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "South Dyke - Dog Park",
+              "ReadableName": null,
+              "Value": "637e3e92-85ae-4299-ba43-5ac021809c16",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Spul\u0027u\u0027kwuks Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "be946765-0916-40bb-81ed-f8f71e3fe810",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Spul\u0027u\u0027kwuks School",
+              "ReadableName": null,
+              "Value": "9430c603-f3ef-4649-a88e-17d96ce195f2",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "St Alban\u0027s Church",
+              "ReadableName": null,
+              "Value": "74b3310b-b849-4818-80e3-7537a66ce2d7",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Steves Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "f1792792-89a7-490f-ae69-2c3f8138c325",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Steves School",
+              "ReadableName": null,
+              "Value": "97eef681-e4e3-4be9-81e3-33b197ea85c2",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Steveston Community Centre",
+              "ReadableName": null,
+              "Value": "4aac8a6a-ec31-432c-82ce-97277d204b58",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Steveston Museum",
+              "ReadableName": null,
+              "Value": "f2715396-246e-4f55-b818-426cde5a79dd",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Steveston Outdoor Pool",
+              "ReadableName": null,
+              "Value": "934df664-5f03-403d-a56b-c911ad08b572",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Steveston Park",
+              "ReadableName": null,
+              "Value": "21161290-5453-4742-a20f-5832b9b8eeac",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Steveston Town Square Neighbourhood Park",
+              "ReadableName": null,
+              "Value": "64859bd1-12ca-4066-8419-391605941dfa",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Steveston Tram",
+              "ReadableName": null,
+              "Value": "3025ddfc-1797-4b13-9bff-890a774ab41f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Steveston-London School",
+              "ReadableName": null,
+              "Value": "1a1bab7b-9a99-4c46-881d-40dca73d0218",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Tait Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "afdf9eb5-813a-4871-a3ff-7badcd0f001a",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Tait Riverfront Park",
+              "ReadableName": null,
+              "Value": "6479e20f-fde1-41eb-8a51-54f00720daf0",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Tait School",
+              "ReadableName": null,
+              "Value": "8998f738-0085-4c08-96a1-c5a1c8a80c71",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Talmey Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "5a620d47-098a-4314-86ab-637e390a0cfd",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Terra Nova Rural Park",
+              "ReadableName": null,
+              "Value": "3a4d7178-74ae-4c33-945c-0465c32f4715",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Thomas Kidd School",
+              "ReadableName": null,
+              "Value": "3a14147b-8f90-44ee-918d-75eab64f1902",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Thompson Community Centre",
+              "ReadableName": null,
+              "Value": "a32babb7-b39c-4da2-8f28-e67cd417deb8",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Thompson Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "4cf47aee-fa5b-484f-9600-22c1ad1b2e96",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Thompson School",
+              "ReadableName": null,
+              "Value": "30dfe72f-91d3-49a0-a905-37e24572a8c4",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Tomsett Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "e0b7b2ca-cbfe-436e-84b2-646f6bb1c8bb",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Tomsett School",
+              "ReadableName": null,
+              "Value": "467d1d64-9594-47df-a74f-fce17d00dd1b",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Toyota Park",
+              "ReadableName": null,
+              "Value": "a10bbceb-6112-4a92-a500-5cb1bab8166e",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "UBC Boathouse - Fraser River",
+              "ReadableName": null,
+              "Value": "615fe8c2-a9cf-4e4e-be15-39f52b0f1a1c",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Watermania",
+              "ReadableName": null,
+              "Value": "814a6caf-f87b-46e3-9784-600dfa1c04c4",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "West Dyke Trail",
+              "ReadableName": null,
+              "Value": "6b1eb74b-e78a-4770-8676-7f1dd105ed89",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "West Richmond Community Centre",
+              "ReadableName": null,
+              "Value": "b6311cd2-bfbf-4164-94c4-c67029915812",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Westwind Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "d1d31cac-f4ae-4707-b12f-166b03acf060",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Westwind School",
+              "ReadableName": null,
+              "Value": "0b678f6e-23f7-44a3-80cd-a3a7782583ce",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Whiteside Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "0e2e694c-8945-4e47-9b40-52161925060b",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Whiteside School",
+              "ReadableName": null,
+              "Value": "753542d9-6f60-40c1-a6d9-c04bcc34d914",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Woodward Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "769d51eb-8e5f-44cc-93b7-e22dad1775c1",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Woodward School",
+              "ReadableName": null,
+              "Value": "2a3a2c24-de3c-4ecd-b27b-eb65a6f5f2f6",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Woodwards Slough",
+              "ReadableName": null,
+              "Value": "c6ed88e4-3d97-4ec9-90da-81ad5acece03",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Works Yard",
+              "ReadableName": null,
+              "Value": "a33fc1f7-f3dd-40bf-90aa-9c9e80064b83",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            },
+            {
+              "Name": "Wowk Neighbourhood School Park",
+              "ReadableName": null,
+              "Value": "6dfe8ef1-2e10-4d31-bbc7-0499a2ee204f",
+              "Value2": null,
+              "Metadata": null,
+              "ValueKind": 5,
+              "Children": []
+            }
+          ]
+        }
+      ],
+      "Visible": false
+    },
+    {
+      "GroupName": "Service",
+      "GroupPluralName": "All Services",
+      "FilterGroupOrder": null,
+      "FilterGroupKind": 2,
+      "Values": [
+        {
+          "Name": "Swim - Parent and Tot 1 - Jellyfish - (4-12 Months)",
+          "ReadableName": null,
+          "Value": "8b1e197e-7aaf-4349-ab1e-06fee97aaec3",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 2,
+          "Children": null
+        },
+        {
+          "Name": "Swim - Parent and Tot 2 - Goldfish - (12-24 Months)",
+          "ReadableName": null,
+          "Value": "088e0e50-0211-43a2-90ff-1e1a724c418c",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 2,
+          "Children": null
+        },
+        {
+          "Name": "Swim - Parent and Tot 3 - Seahorse - (2-3 Years)",
+          "ReadableName": null,
+          "Value": "f56639e2-3f41-4edf-a7ae-01d1fa44ef72",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 2,
+          "Children": null
+        },
+        {
+          "Name": "Swim - Preschool 1 - Octopus",
+          "ReadableName": null,
+          "Value": "ad9b6c41-4e49-492a-af6d-2034f8f90718",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 2,
+          "Children": null
+        },
+        {
+          "Name": "Swim - Preschool 2 - Crab",
+          "ReadableName": null,
+          "Value": "0fd285da-d6a8-43bb-a025-a0f4b1d19b59",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 2,
+          "Children": null
+        },
+        {
+          "Name": "Swim - Preschool 3 - Orca",
+          "ReadableName": null,
+          "Value": "c4b55846-c672-4c1c-b82f-e33d785e454d",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 2,
+          "Children": null
+        },
+        {
+          "Name": "Swim - Preschool 4 - Sea Lion",
+          "ReadableName": null,
+          "Value": "3c3c9c92-0863-41b5-805c-c337c9604386",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 2,
+          "Children": null
+        },
+        {
+          "Name": "Swim - Preschool 5 - Narwal",
+          "ReadableName": null,
+          "Value": "c7319fb5-bb7e-49a8-99f6-39e080cdcd3d",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 2,
+          "Children": null
+        }
+      ],
+      "Visible": true
+    },
+    {
+      "GroupName": "Date Range",
+      "GroupPluralName": null,
+      "FilterGroupOrder": null,
+      "FilterGroupKind": 6,
+      "Values": [
+        {
+          "Name": "Date Range",
+          "ReadableName": null,
+          "Value": "11/01/24",
+          "Value2": "4/30/25",
+          "Metadata": { "ApplyStartDateLimitation": false },
+          "ValueKind": 6,
+          "Children": null
+        }
+      ],
+      "Visible": true
+    },
+    {
+      "GroupName": "Days of week",
+      "GroupPluralName": null,
+      "FilterGroupOrder": null,
+      "FilterGroupKind": 8,
+      "Values": [
+        {
+          "Name": "Monday",
+          "ReadableName": null,
+          "Value": "Monday",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 8,
+          "Children": null
+        },
+        {
+          "Name": "Tuesday",
+          "ReadableName": null,
+          "Value": "Tuesday",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 8,
+          "Children": null
+        },
+        {
+          "Name": "Wednesday",
+          "ReadableName": null,
+          "Value": "Wednesday",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 8,
+          "Children": null
+        },
+        {
+          "Name": "Thursday",
+          "ReadableName": null,
+          "Value": "Thursday",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 8,
+          "Children": null
+        },
+        {
+          "Name": "Friday",
+          "ReadableName": null,
+          "Value": "Friday",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 8,
+          "Children": null
+        },
+        {
+          "Name": "Saturday",
+          "ReadableName": null,
+          "Value": "Saturday",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 8,
+          "Children": null
+        },
+        {
+          "Name": "Sunday",
+          "ReadableName": null,
+          "Value": "Sunday",
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 8,
+          "Children": null
+        }
+      ],
+      "Visible": true
+    },
+    {
+      "GroupName": "Age",
+      "GroupPluralName": null,
+      "FilterGroupOrder": null,
+      "FilterGroupKind": 0,
+      "Values": [
+        {
+          "Name": "Age",
+          "ReadableName": null,
+          "Value": null,
+          "Value2": null,
+          "Metadata": null,
+          "ValueKind": 0,
+          "Children": null
+        }
+      ],
+      "Visible": true
+    }
+  ]
+}
