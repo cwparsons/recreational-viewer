@@ -1,21 +1,24 @@
-import got from 'got';
-
 import { CoursesV2Response } from '../../types/CoursesV2Response';
 
-const map = new Map();
-
 const CoursesV2 = async (subdomain: string, calendarId: string): Promise<CoursesV2Response> => {
-  const response = await got.post(`https://${subdomain}.perfectmind.com/Clients/BookMe4BookingPagesV2/CoursesV2`, {
-    cache: map,
-    json: {
+  const response = await fetch(`https://${subdomain}.perfectmind.com/Clients/BookMe4BookingPagesV2/CoursesV2`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
       calendarId,
       page: '0',
-      bookingMode: '0'
-    },
-    responseType: 'json'
+      bookingMode: '0',
+    }),
+    next: { revalidate: 60 * 60 },
   });
 
-  return response.body as CoursesV2Response;
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  return response.json() as Promise<CoursesV2Response>;
 };
 
 export default CoursesV2;
