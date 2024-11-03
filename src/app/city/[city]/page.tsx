@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
+
 import GetCategoriesDataV2 from '../../_services/GetCategoriesDataV2';
 import Header from '@/app/_components/Header';
 import { Locations } from '@/locations';
@@ -7,6 +9,10 @@ export default async function Page({ params }: { params: Promise<{ city: string 
   const { city } = await params;
   const categories = await GetCategoriesDataV2(city);
   const cityName = Locations.flatMap((location) => location.sites).find((site) => site.subdomain === city)?.name;
+
+  if (categories.length === 0) {
+    return notFound();
+  }
 
   return (
     <>
@@ -21,7 +27,7 @@ export default async function Page({ params }: { params: Promise<{ city: string 
 
             return (
               <div className="border rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800 dark:border-gray-700" key={i}>
-                <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">{c.Name}</h2>
+                <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">{c.Name}</h2>
 
                 <ul className="space-y-2">
                   <li>
