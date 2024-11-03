@@ -36,9 +36,9 @@ export interface Course {
   Occurrences: Occurrence[];
   NumberOfSessions: number;
   PrerequisiteEvents: boolean;
-  MinAge: unknown;
+  MinAge: number | null;
   MinAgeMonths: number;
-  MaxAge: unknown;
+  MaxAge: number | null;
   MaxAgeMonths: number;
   NoAgeRestriction: boolean;
   AgeRestrictions: string;

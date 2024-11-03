@@ -1,18 +1,27 @@
 'use client';
 
-import { AgGridReact } from 'ag-grid-react';
 import { ColDef, ColGroupDef } from 'ag-grid-community';
-import { useRef, useState } from 'react';
+import { AgGridReact } from 'ag-grid-react';
+import { useCallback, useEffect, useRef } from 'react';
 
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 
 import { type Course } from '@/types/CoursesV2Response';
+import { useLocalStorage } from '../_hooks/use-location-storage';
 
 type GridProps = {
   city: string;
   courses: Course[];
 };
+
+function formatMonthsYears({ value }: { value: number }) {
+  const totalMonths = Math.round(value * 12);
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  return `${years}y ${months}m`;
+}
 
 function getFacilityLocation(course: Course) {
   if (course.OrgIsSingleLocation) {
@@ -22,31 +31,47 @@ function getFacilityLocation(course: Course) {
   return course.Location + (course.Facility ? ' - ' + course.Facility : '');
 }
 
+function determineSpotsStatus(spots: string) {
+  if (spots === 'FULL - Waitlist Available') return 'Wait list';
+
+  if (spots !== '') return spots.replace(' left', '');
+
+  return 'Closed';
+}
+
 export const Grid = ({ city, courses }: GridProps) => {
   const rowData = courses.map((course) => ({
     ...course,
     OccurrenceMinStartDate: new Date(course.OccurrenceMinStartDate),
     OccurrenceMaxStartDate: course.OccurrenceMaxStartDate ? new Date(course.OccurrenceMaxStartDate.replace(' - ', '')) : undefined,
+    MinimumAge: (course.MinAge ?? 0) + course.MinAgeMonths / 12,
+    MaximumAge: (course.MaxAge ?? 0) + course.MaxAgeMonths / 12,
     FormattedMinimumAge: `${course.MinAge ?? 0}y ${course.MinAgeMonths ?? 0}m`,
     FormattedMaximumAge: `${course.MaxAge ?? 0}y ${course.MaxAgeMonths ?? 0}m`,
     FacilityLocation: getFacilityLocation(course),
-    spots: course.BookButtonText === 'Closed' ? 'Closed' : course.Spots || 'N/A',
+    spots: determineSpotsStatus(course.Spots),
   }));
 
   type Row = (typeof rowData)[number];
+
   const gridRef = useRef<AgGridReact<Row>>(null);
-  const [isTodayFilterChecked, setIsTodayFilterChecked] = useState(false);
-  const [isSpotsAvailableChecked, setIsSpotsAvailableChecked] = useState(false);
+  const [isTodayFilterChecked, setIsTodayFilterChecked] = useLocalStorage('isTodayFilterChecked', false);
+  const [isSpotsAvailableChecked, setIsSpotsAvailableChecked] = useLocalStorage('isSpotsAvailableChecked', false);
+  const [ageFilter, setAgeFilter] = useLocalStorage<{ years?: number; months?: number }>('ageFilter', {});
 
   const columnDefs: (ColDef<Row> | ColGroupDef<Row>)[] = [
     {
       headerName: 'Name',
       field: 'EventName',
       sort: 'asc',
+      pinned: 'left',
+      tooltipField: 'Details',
+      floatingFilter: true,
     },
     {
       headerName: 'No.',
       field: 'CourseIdTrimmed',
+      width: 100,
     },
     {
       headerName: 'Start',
@@ -54,9 +79,10 @@ export const Grid = ({ city, courses }: GridProps) => {
       sortable: true,
       filter: 'agDateColumnFilter',
       filterParams: {
-        defaultOption: 'greaterThan',
-        defaultFilter: new Date().toISOString().split('T')[0],
+        type: 'greaterThan',
+        dateFrom: new Date().toISOString().split('T')[0],
       },
+      width: 120,
     },
     {
       headerName: 'End',
@@ -66,78 +92,98 @@ export const Grid = ({ city, courses }: GridProps) => {
       filterParams: {
         defaultOption: 'lessThan',
       },
+      width: 120,
     },
     {
       headerName: 'Occurs',
       field: 'OccurrenceDescription',
+      width: 150,
     },
     {
       headerName: 'Time',
       field: 'EventTimeDescription',
+      width: 200,
     },
     {
       headerName: 'Location',
       field: 'FacilityLocation',
+      floatingFilter: true,
+      width: 300,
     },
     {
       headerName: 'Min age',
-      field: 'FormattedMinimumAge',
+      field: 'MinimumAge',
+      valueFormatter: formatMonthsYears,
+      width: 120,
     },
     {
       headerName: 'Max age',
-      field: 'FormattedMaximumAge',
+      field: 'MaximumAge',
+      valueFormatter: formatMonthsYears,
+      width: 120,
     },
     {
       headerName: 'Price',
       field: 'PriceRange',
+      width: 120,
     },
     {
       headerName: 'Spots',
       field: 'spots',
-      cellRenderer: (params: { data: Course; value: string }) => {
-        const url = `https://${city}.perfectmind.com/Clients/BookMe4LandingPages/CoursesLandingPage?courseId=${params.data.EventId}`;
+      filterParams: {
+        maxNumConditions: 3,
+      },
+      pinned: 'right',
+      width: 120,
+      cellRenderer: ({ data: { EventId }, value }: { data: Course; value: string }) => {
+        const url = `https://${city}.perfectmind.com/Clients/BookMe4LandingPages/CoursesLandingPage?courseId=${EventId}`;
 
         return (
-          <a className="text-blue-600 hover:underline dark:text-blue-400" href={url} target="_blank" rel="noopener noreferrer">
-            {params.value}
+          <a
+            className="text-blue-600 hover:underline dark:text-blue-400"
+            href={url}
+            target="_blank"
+            title="Course detail page"
+            rel="noopener noreferrer"
+          >
+            {value}
           </a>
         );
       },
     },
   ];
 
-  const toggleStartFilter = async () => {
-    if (gridRef.current === null) return;
+  const toggleStartFilter = useCallback(async () => {
+    if (!gridRef.current?.api) return;
 
     const dateFilterComponent = await gridRef.current.api.getColumnFilterInstance('OccurrenceMinStartDate');
 
     if (!dateFilterComponent) return;
 
     if (isTodayFilterChecked) {
-      dateFilterComponent.setModel(null);
-    } else {
       dateFilterComponent.setModel({
         type: 'greaterThan',
         dateFrom: new Date().toISOString().split('T')[0],
       });
+    } else {
+      dateFilterComponent.setModel(null);
     }
 
     gridRef.current.api.onFilterChanged();
-    setIsTodayFilterChecked(!isTodayFilterChecked);
-  };
+  }, [isTodayFilterChecked]);
 
-  const toggleSpotsAvailableFilter = async () => {
-    if (gridRef.current === null) return;
+  useEffect(() => {
+    toggleStartFilter();
+  }, [isTodayFilterChecked, toggleStartFilter]);
+
+  const toggleSpotsAvailableFilter = useCallback(async () => {
+    if (!gridRef.current?.api) return;
 
     const spotsFilterComponent = await gridRef.current.api.getColumnFilterInstance('spots');
 
     if (!spotsFilterComponent) return;
 
-    console.log(spotsFilterComponent.getModel());
-
     if (isSpotsAvailableChecked) {
-      spotsFilterComponent.setModel(null);
-    } else {
       spotsFilterComponent.setModel({
         filterType: 'text',
         operator: 'AND',
@@ -150,49 +196,142 @@ export const Grid = ({ city, courses }: GridProps) => {
           {
             filterType: 'text',
             type: 'notContains',
-            filter: 'Waitlist',
+            filter: 'Wait',
+          },
+          {
+            filterType: 'text',
+            type: 'notContains',
+            filter: 'Full',
           },
         ],
+      });
+    } else {
+      spotsFilterComponent.setModel(null);
+    }
+
+    gridRef.current.api.onFilterChanged();
+  }, [isSpotsAvailableChecked]);
+
+  useEffect(() => {
+    toggleSpotsAvailableFilter();
+  }, [isSpotsAvailableChecked, toggleSpotsAvailableFilter]);
+
+  const toggleAgeFilter = useCallback(async () => {
+    if (!gridRef.current?.api) return;
+
+    if (ageFilter.years === undefined && ageFilter.months === undefined) {
+      gridRef.current.api.setFilterModel({
+        ...gridRef.current.api.getFilterModel(),
+        MinimumAge: null,
+        MaximumAge: null,
+      });
+    } else {
+      const filter = (ageFilter.years ?? 0) + (ageFilter.months ?? 0) / 12;
+
+      gridRef.current.api.setFilterModel({
+        ...gridRef.current.api.getFilterModel(),
+        MinimumAge: {
+          filterType: 'number',
+          type: 'lessThanOrEqual',
+          filter,
+        },
+        MaximumAge: {
+          filterType: 'number',
+          type: 'greaterThanOrEqual',
+          filter,
+        },
       });
     }
 
     gridRef.current.api.onFilterChanged();
-    setIsSpotsAvailableChecked(!isSpotsAvailableChecked);
+  }, [ageFilter]);
+
+  // Age filter
+  useEffect(() => {
+    toggleAgeFilter();
+  }, [ageFilter, toggleAgeFilter]);
+
+  const resetFilters = () => {
+    setIsTodayFilterChecked(false);
+    setIsSpotsAvailableChecked(false);
+    setAgeFilter({ years: undefined, months: undefined });
+
+    if (gridRef.current?.api) {
+      gridRef.current.api.setFilterModel(null);
+    }
+  };
+
+  const setInitialFilters = () => {
+    toggleStartFilter();
+    toggleSpotsAvailableFilter();
+    toggleAgeFilter();
   };
 
   return (
-    <div className="flex h-full flex-col">
-      <div className="mb-3 flex gap-2 rounded-lg border bg-white p-3 shadow-lg dark:border-gray-700 dark:bg-gray-800">
-        <label className="flex cursor-pointer items-center space-x-2">
+    <div className="flex flex-col gap-8">
+      <form className="flex gap-6 rounded-lg border bg-white p-3 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+        <label className="flex cursor-pointer items-center gap-2">
           <input
             type="checkbox"
             checked={isTodayFilterChecked}
-            onChange={toggleStartFilter}
-            className="form-checkbox h-5 w-5 text-blue-600"
+            onChange={(e) => setIsTodayFilterChecked(e.target.checked)}
+            className="h-5 w-5 text-blue-600"
           />
-          <span className="font-medium text-gray-900 dark:text-gray-100">Filter upcoming events</span>
+          <span className="text-gray-900 dark:text-gray-100">Upcoming events</span>
         </label>
 
-        <label className="flex cursor-pointer items-center space-x-2">
+        <label className="flex cursor-pointer items-center gap-2">
           <input
             type="checkbox"
             checked={isSpotsAvailableChecked}
-            onChange={toggleSpotsAvailableFilter}
-            className="form-checkbox h-5 w-5 text-blue-600"
+            onChange={(e) => setIsSpotsAvailableChecked(e.target.checked)}
+            className="h-5 w-5 text-blue-600"
           />
-          <span className="font-medium text-gray-900 dark:text-gray-100">Show only available spots</span>
+          <span className="text-gray-900 dark:text-gray-100">Available spots</span>
         </label>
-      </div>
 
-      <div className="ag-theme-quartz-auto-dark flex-1">
+        <label className="flex items-center gap-2">
+          <span className="text-gray-900 dark:text-gray-100">Age:</span>
+          <input
+            aria-label="Years"
+            type="number"
+            min="0"
+            step="1"
+            value={ageFilter.years ?? ''}
+            onChange={(e) => setAgeFilter({ ...ageFilter, years: parseInt(e.target.value) })}
+            className="w-16 bg-white px-2 py-1 text-black dark:bg-gray-700 dark:text-white"
+            placeholder="yy"
+          />
+          <input
+            aria-label="Months"
+            type="number"
+            min="0"
+            max="11"
+            step="1"
+            value={ageFilter.months ?? ''}
+            onChange={(e) => setAgeFilter({ ...ageFilter, months: parseInt(e.target.value) })}
+            className="w-16 bg-white px-2 py-1 text-black dark:bg-gray-700 dark:text-white"
+            placeholder="mm"
+          />
+        </label>
+
+        <button className="text-blue-600 hover:underline dark:text-blue-400" onClick={resetFilters} type="button">
+          Reset all filters
+        </button>
+      </form>
+
+      <div className="ag-theme-quartz-auto-dark">
         <AgGridReact<Row>
           ref={gridRef}
           autoSizeStrategy={{
-            type: 'fitCellContents',
+            type: 'fitGridWidth',
           }}
+          domLayout="autoHeight"
           rowData={rowData}
           columnDefs={columnDefs}
           defaultColDef={{ filter: true }}
+          onGridReady={setInitialFilters}
+          // onFirstDataRendered={(params) => params.api.sizeColumnsToFit()}
         />
       </div>
     </div>
