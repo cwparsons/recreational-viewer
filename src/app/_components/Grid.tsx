@@ -4,15 +4,35 @@ import { ColDef, ColGroupDef } from 'ag-grid-community';
 import { AgGridReact } from 'ag-grid-react';
 import { useCallback, useEffect, useRef } from 'react';
 
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-quartz.css';
-
 import { type Course } from '@/types/CoursesV2Response';
 import { useLocalStorage } from '../_hooks/use-location-storage';
+
+import 'ag-grid-community/styles/ag-grid.css';
+import 'ag-grid-community/styles/ag-theme-quartz.css';
 
 type GridProps = {
   city: string;
   courses: Course[];
+};
+
+type Row = Omit<
+  Course,
+  | 'OccurrenceMinStartDate'
+  | 'OccurrenceMaxStartDate'
+  | 'MinimumAge'
+  | 'MaximumAge'
+  | 'FormattedMinimumAge'
+  | 'FormattedMaximumAge'
+  | 'FacilityLocation'
+> & {
+  OccurrenceMinStartDate: Date;
+  OccurrenceMaxStartDate?: Date;
+  MinimumAge: number;
+  MaximumAge: number;
+  FormattedMinimumAge: string;
+  FormattedMaximumAge: string;
+  FacilityLocation: string;
+  spots: string;
 };
 
 function formatMonthsYears({ value }: { value: number }) {
@@ -40,7 +60,7 @@ function determineSpotsStatus(spots: string) {
 }
 
 export const Grid = ({ city, courses }: GridProps) => {
-  const rowData = courses.map((course) => ({
+  const rowData: Row[] = courses.map((course) => ({
     ...course,
     OccurrenceMinStartDate: new Date(course.OccurrenceMinStartDate),
     OccurrenceMaxStartDate: course.OccurrenceMaxStartDate ? new Date(course.OccurrenceMaxStartDate.replace(' - ', '')) : undefined,
@@ -52,11 +72,11 @@ export const Grid = ({ city, courses }: GridProps) => {
     spots: determineSpotsStatus(course.Spots),
   }));
 
-  type Row = (typeof rowData)[number];
-
   const gridRef = useRef<AgGridReact<Row>>(null);
+
   const [isTodayFilterChecked, setIsTodayFilterChecked] = useLocalStorage('isTodayFilterChecked', false);
   const [isSpotsAvailableChecked, setIsSpotsAvailableChecked] = useLocalStorage('isSpotsAvailableChecked', false);
+  const [isWeekendFilterChecked, setIsWeekendFilterChecked] = useLocalStorage('isWeekendFilterChecked', false);
   const [ageFilter, setAgeFilter] = useLocalStorage<{ years?: number; months?: number }>('ageFilter', {});
 
   const columnDefs: (ColDef<Row> | ColGroupDef<Row>)[] = [
@@ -176,6 +196,41 @@ export const Grid = ({ city, courses }: GridProps) => {
     toggleStartFilter();
   }, [isTodayFilterChecked, toggleStartFilter]);
 
+  const toggleWeekendFilter = useCallback(async () => {
+    if (!gridRef.current?.api) return;
+
+    const occursFilterComponent = await gridRef.current.api.getColumnFilterInstance('OccurrenceDescription');
+
+    if (!occursFilterComponent) return;
+
+    if (isWeekendFilterChecked) {
+      occursFilterComponent.setModel({
+        filterType: 'text',
+        operator: 'OR',
+        conditions: [
+          {
+            filterType: 'text',
+            type: 'contains',
+            filter: 'Sat',
+          },
+          {
+            filterType: 'text',
+            type: 'contains',
+            filter: 'Sun',
+          },
+        ],
+      });
+    } else {
+      occursFilterComponent.setModel(null);
+    }
+
+    gridRef.current.api.onFilterChanged();
+  }, [isWeekendFilterChecked]);
+
+  useEffect(() => {
+    toggleWeekendFilter();
+  }, [isWeekendFilterChecked, toggleWeekendFilter]);
+
   const toggleSpotsAvailableFilter = useCallback(async () => {
     if (!gridRef.current?.api) return;
 
@@ -246,7 +301,6 @@ export const Grid = ({ city, courses }: GridProps) => {
     gridRef.current.api.onFilterChanged();
   }, [ageFilter]);
 
-  // Age filter
   useEffect(() => {
     toggleAgeFilter();
   }, [ageFilter, toggleAgeFilter]);
@@ -254,6 +308,7 @@ export const Grid = ({ city, courses }: GridProps) => {
   const resetFilters = () => {
     setIsTodayFilterChecked(false);
     setIsSpotsAvailableChecked(false);
+    setIsWeekendFilterChecked(false);
     setAgeFilter({ years: undefined, months: undefined });
 
     if (gridRef.current?.api) {
@@ -264,6 +319,7 @@ export const Grid = ({ city, courses }: GridProps) => {
   const setInitialFilters = () => {
     toggleStartFilter();
     toggleSpotsAvailableFilter();
+    toggleWeekendFilter();
     toggleAgeFilter();
   };
 
@@ -275,7 +331,7 @@ export const Grid = ({ city, courses }: GridProps) => {
             type="checkbox"
             checked={isTodayFilterChecked}
             onChange={(e) => setIsTodayFilterChecked(e.target.checked)}
-            className="h-5 w-5 text-blue-600"
+            className="h-5 w-5 cursor-pointer text-blue-600"
           />
           <span className="text-gray-900 dark:text-gray-100">Upcoming events</span>
         </label>
@@ -285,13 +341,23 @@ export const Grid = ({ city, courses }: GridProps) => {
             type="checkbox"
             checked={isSpotsAvailableChecked}
             onChange={(e) => setIsSpotsAvailableChecked(e.target.checked)}
-            className="h-5 w-5 text-blue-600"
+            className="h-5 w-5 cursor-pointer text-blue-600"
           />
           <span className="text-gray-900 dark:text-gray-100">Available spots</span>
         </label>
 
+        <label className="flex cursor-pointer items-center gap-2">
+          <input
+            type="checkbox"
+            checked={isWeekendFilterChecked}
+            onChange={(e) => setIsWeekendFilterChecked(e.target.checked)}
+            className="h-5 w-5 cursor-pointer text-blue-600"
+          />
+          <span className="text-gray-900 dark:text-gray-100">Weekend</span>
+        </label>
+
         <label className="flex items-center gap-2">
-          <span className="text-gray-900 dark:text-gray-100">Age:</span>
+          <span className="text-gray-900 dark:text-gray-100">Age</span>
           <input
             aria-label="Years"
             type="number"
