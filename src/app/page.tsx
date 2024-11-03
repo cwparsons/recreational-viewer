@@ -8,10 +8,10 @@ export default async function Home() {
     <>
       <Header breadcrumbs={[]} title={'Directory'} />
 
-      <div className="grid gap-6 grid-cols-[repeat(auto-fill,minmax(320px,1fr))]">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-6">
         {Locations.map(({ name, sites }) => (
-          <div key={name} className="border rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800 dark:border-gray-700">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">{name}</h2>
+          <div key={name} className="rounded-lg border bg-white p-6 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+            <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-gray-100">{name}</h2>
 
             <nav>
               <ul className="space-y-2">

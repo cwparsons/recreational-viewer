@@ -40,7 +40,7 @@ const Header = ({ title, breadcrumbs }: HeaderProps) => {
         </ol>
       </nav>
 
-      {title && <h1 className="text-3xl md:text-5xl font-bold mb-8">{title}</h1>}
+      {title && <h1 className="mb-8 text-3xl font-bold md:text-5xl">{title}</h1>}
     </header>
   );
 };

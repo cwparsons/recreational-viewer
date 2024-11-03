@@ -18,7 +18,7 @@ export default async function Page({ params }: { params: Promise<{ city: string 
     <>
       <Header title={cityName} breadcrumbs={[{ label: 'Directory', href: '/' }]} />
 
-      <div className="grid gap-6 grid-cols-[repeat(auto-fill,minmax(320px,1fr))]">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-6">
         {categories
           .filter((c) => c.Calendars.length > 0)
           .filter((c) => c.Calendars.some((cal) => !!cal.BookingLink))
@@ -26,8 +26,8 @@ export default async function Page({ params }: { params: Promise<{ city: string 
             const calendars = c.Calendars.filter((calendar) => !!calendar.BookingLink);
 
             return (
-              <div className="border rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800 dark:border-gray-700" key={i}>
-                <h2 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">{c.Name}</h2>
+              <div className="rounded-lg border bg-white p-6 shadow-lg dark:border-gray-700 dark:bg-gray-800" key={i}>
+                <h2 className="mb-4 text-xl font-semibold text-gray-900 md:text-2xl dark:text-gray-100">{c.Name}</h2>
 
                 <ul className="space-y-2">
                   <li>

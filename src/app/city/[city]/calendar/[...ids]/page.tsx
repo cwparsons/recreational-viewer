@@ -37,7 +37,7 @@ export default async function Page({ params }: { params: Promise<{ city: string;
   const title = ids.length > 1 ? currentCategory?.Name : `${currentCalendar?.Name} - ${currentCategory?.Name}`;
 
   return (
-    <div className="flex flex-col h-[calc(100vh-2rem)] md:h-[calc(100vh-8rem)]">
+    <div className="flex h-[calc(100vh-2rem)] flex-col md:h-[calc(100vh-8rem)]">
       <Header
         title={title}
         breadcrumbs={[

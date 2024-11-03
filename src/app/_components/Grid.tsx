@@ -2,6 +2,7 @@
 
 import { AgGridReact } from 'ag-grid-react';
 import { ColDef, ColGroupDef } from 'ag-grid-community';
+import { useRef, useState } from 'react';
 
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
@@ -32,22 +33,24 @@ export const Grid = ({ city, courses }: GridProps) => {
     spots: course.BookButtonText === 'Closed' ? 'Closed' : course.Spots || 'N/A',
   }));
 
-  const columnDefs: (ColDef<(typeof rowData)[number]> | ColGroupDef<(typeof rowData)[number]>)[] = [
+  type Row = (typeof rowData)[number];
+  const gridRef = useRef<AgGridReact<Row>>(null);
+  const [isTodayFilterChecked, setIsTodayFilterChecked] = useState(false);
+  const [isSpotsAvailableChecked, setIsSpotsAvailableChecked] = useState(false);
+
+  const columnDefs: (ColDef<Row> | ColGroupDef<Row>)[] = [
     {
       headerName: 'Name',
       field: 'EventName',
       sort: 'asc',
-      pinned: 'left',
     },
     {
       headerName: 'No.',
       field: 'CourseIdTrimmed',
-      maxWidth: 100,
     },
     {
       headerName: 'Start',
       field: 'OccurrenceMinStartDate',
-      maxWidth: 120,
       sortable: true,
       filter: 'agDateColumnFilter',
       filterParams: {
@@ -58,7 +61,6 @@ export const Grid = ({ city, courses }: GridProps) => {
     {
       headerName: 'End',
       field: 'OccurrenceMaxStartDate',
-      maxWidth: 120,
       sortable: true,
       filter: 'agDateColumnFilter',
       filterParams: {
@@ -68,12 +70,10 @@ export const Grid = ({ city, courses }: GridProps) => {
     {
       headerName: 'Occurs',
       field: 'OccurrenceDescription',
-      maxWidth: 150,
     },
     {
       headerName: 'Time',
       field: 'EventTimeDescription',
-      maxWidth: 200,
     },
     {
       headerName: 'Location',
@@ -82,17 +82,14 @@ export const Grid = ({ city, courses }: GridProps) => {
     {
       headerName: 'Min age',
       field: 'FormattedMinimumAge',
-      maxWidth: 100,
     },
     {
       headerName: 'Max age',
       field: 'FormattedMaximumAge',
-      maxWidth: 100,
     },
     {
       headerName: 'Price',
       field: 'PriceRange',
-      maxWidth: 150,
     },
     {
       headerName: 'Spots',
@@ -109,16 +106,95 @@ export const Grid = ({ city, courses }: GridProps) => {
     },
   ];
 
-  const gridOptions = {
-    autoSizeStrategy: {
-      type: 'fitCellContents',
-      defaultMinWidth: 100,
-    },
-  } as const;
+  const toggleStartFilter = async () => {
+    if (gridRef.current === null) return;
+
+    const dateFilterComponent = await gridRef.current.api.getColumnFilterInstance('OccurrenceMinStartDate');
+
+    if (!dateFilterComponent) return;
+
+    if (isTodayFilterChecked) {
+      dateFilterComponent.setModel(null);
+    } else {
+      dateFilterComponent.setModel({
+        type: 'greaterThan',
+        dateFrom: new Date().toISOString().split('T')[0],
+      });
+    }
+
+    gridRef.current.api.onFilterChanged();
+    setIsTodayFilterChecked(!isTodayFilterChecked);
+  };
+
+  const toggleSpotsAvailableFilter = async () => {
+    if (gridRef.current === null) return;
+
+    const spotsFilterComponent = await gridRef.current.api.getColumnFilterInstance('spots');
+
+    if (!spotsFilterComponent) return;
+
+    console.log(spotsFilterComponent.getModel());
+
+    if (isSpotsAvailableChecked) {
+      spotsFilterComponent.setModel(null);
+    } else {
+      spotsFilterComponent.setModel({
+        filterType: 'text',
+        operator: 'AND',
+        conditions: [
+          {
+            filterType: 'text',
+            type: 'notContains',
+            filter: 'Closed',
+          },
+          {
+            filterType: 'text',
+            type: 'notContains',
+            filter: 'Waitlist',
+          },
+        ],
+      });
+    }
+
+    gridRef.current.api.onFilterChanged();
+    setIsSpotsAvailableChecked(!isSpotsAvailableChecked);
+  };
 
   return (
-    <div className="h-full ag-theme-quartz-auto-dark">
-      <AgGridReact gridOptions={gridOptions} rowData={rowData} columnDefs={columnDefs} defaultColDef={{ filter: true }} />
+    <div className="flex h-full flex-col">
+      <div className="mb-3 flex gap-2 rounded-lg border bg-white p-3 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+        <label className="flex cursor-pointer items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={isTodayFilterChecked}
+            onChange={toggleStartFilter}
+            className="form-checkbox h-5 w-5 text-blue-600"
+          />
+          <span className="font-medium text-gray-900 dark:text-gray-100">Filter upcoming events</span>
+        </label>
+
+        <label className="flex cursor-pointer items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={isSpotsAvailableChecked}
+            onChange={toggleSpotsAvailableFilter}
+            className="form-checkbox h-5 w-5 text-blue-600"
+          />
+          <span className="font-medium text-gray-900 dark:text-gray-100">Show only available spots</span>
+        </label>
+      </div>
+
+      <div className="ag-theme-quartz-auto-dark flex-1">
+        <AgGridReact<Row>
+          ref={gridRef}
+          autoSizeStrategy={{
+            type: 'fitCellContents',
+          }}
+          rowData={rowData}
+          columnDefs={columnDefs}
+          defaultColDef={{ filter: true }}
+        />
+      </div>
     </div>
   );
 };
