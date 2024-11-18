@@ -74,9 +74,18 @@ export const Grid = ({ city, courses }: GridProps) => {
 
   const gridRef = useRef<AgGridReact<Row>>(null);
 
-  const [isTodayFilterChecked, setIsTodayFilterChecked] = useLocalStorage('isTodayFilterChecked', false);
-  const [isSpotsAvailableChecked, setIsSpotsAvailableChecked] = useLocalStorage('isSpotsAvailableChecked', false);
-  const [isWeekendFilterChecked, setIsWeekendFilterChecked] = useLocalStorage('isWeekendFilterChecked', false);
+  const [isTodayFilterChecked, setIsTodayFilterChecked] = useLocalStorage(
+    'isTodayFilterChecked',
+    window.location.hash.includes('upcoming')
+  );
+  const [isSpotsAvailableChecked, setIsSpotsAvailableChecked] = useLocalStorage(
+    'isSpotsAvailableChecked',
+    window.location.hash.includes('available')
+  );
+  const [isWeekendFilterChecked, setIsWeekendFilterChecked] = useLocalStorage(
+    'isWeekendFilterChecked',
+    window.location.hash.includes('weekend')
+  );
   const [ageFilter, setAgeFilter] = useLocalStorage<{ years?: number; months?: number }>('ageFilter', {});
 
   const columnDefs: (ColDef<Row> | ColGroupDef<Row>)[] = [

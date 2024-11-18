@@ -1,11 +1,13 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 
 import CoursesV2 from '@/app/_services/CoursesV2';
-import { Grid } from '@/app/_components/Grid';
 import Header from '@/app/_components/Header';
 import GetCategoriesDataV2 from '@/app/_services/GetCategoriesDataV2';
 import { Locations } from '@/locations';
 import { Course } from '@/types/CoursesV2Response';
+
+const Grid = dynamic(() => import('@/app/_components/Grid').then((module) => module.Grid), { ssr: false });
 
 const CONCURRENCY_LIMIT = 8;
 
