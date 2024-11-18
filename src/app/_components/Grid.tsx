@@ -51,12 +51,12 @@ function getFacilityLocation(course: Course) {
   return course.Location + (course.Facility ? ' - ' + course.Facility : '');
 }
 
-function determineSpotsStatus(spots: string) {
+function determineSpotsStatus(spots: string, text: string) {
   if (spots === 'FULL - Waitlist Available') return 'Wait list';
 
   if (spots !== '') return spots.replace(' left', '');
 
-  return 'Closed';
+  return text;
 }
 
 export const Grid = ({ city, courses }: GridProps) => {
@@ -69,7 +69,7 @@ export const Grid = ({ city, courses }: GridProps) => {
     FormattedMinimumAge: `${course.MinAge ?? 0}y ${course.MinAgeMonths ?? 0}m`,
     FormattedMaximumAge: `${course.MaxAge ?? 0}y ${course.MaxAgeMonths ?? 0}m`,
     FacilityLocation: getFacilityLocation(course),
-    spots: determineSpotsStatus(course.Spots),
+    spots: determineSpotsStatus(course.Spots, course.BookButtonText),
   }));
 
   const gridRef = useRef<AgGridReact<Row>>(null);

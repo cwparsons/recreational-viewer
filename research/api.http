@@ -10,8 +10,10 @@
 @widgetId = 15f6af07-39c5-473e-b053-96653f77a406
 
 # Aquatics
-@calendarId = d10da878-da39-4baa-abb4-92e099d47d2f
+# @calendarId = d10da878-da39-4baa-abb4-92e099d47d2f
 
+# Art - Dance
+@calendarId = 58e8890c-f1e1-4743-80d5-d25351078aa1
 
 ###
 # BookMe4V2/GetCategoriesDataV2
