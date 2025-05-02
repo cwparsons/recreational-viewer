@@ -7,7 +7,7 @@ import GetCategoriesDataV2 from '@/app/_services/GetCategoriesDataV2';
 import { Locations } from '@/locations';
 import { Course } from '@/types/CoursesV2Response';
 
-const Grid = dynamic(() => import('@/app/_components/Grid').then((module) => module.Grid), { ssr: false });
+const Grid = dynamic(() => import('@/app/_components/Grid').then((module) => module.Grid));
 
 const CONCURRENCY_LIMIT = 8;
 
@@ -48,7 +48,7 @@ export default async function Page({ params }: { params: Promise<{ city: string;
         ]}
       />
 
-      <div className="flex-grow">
+      <div className="grow">
         <Grid city={city} courses={courses} />
       </div>
     </div>

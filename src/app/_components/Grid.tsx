@@ -6,14 +6,32 @@ import { useCallback, useEffect, useRef } from 'react';
 
 import { type Course } from '@/types/CoursesV2Response';
 import { useLocalStorage } from '../_hooks/use-location-storage';
+import {
+  ClientSideRowModelModule,
+  colorSchemeDarkBlue,
+  ColumnAutoSizeModule,
+  CustomFilterModule,
+  DateFilterModule,
+  ModuleRegistry,
+  NumberFilterModule,
+  TextFilterModule,
+  themeQuartz,
+  TooltipModule,
+  ValidationModule,
+} from 'ag-grid-community';
 
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-quartz.css';
+ModuleRegistry.registerModules([
+  ClientSideRowModelModule,
+  ColumnAutoSizeModule,
+  CustomFilterModule,
+  DateFilterModule,
+  NumberFilterModule,
+  TextFilterModule,
+  TooltipModule,
+  ValidationModule,
+]);
 
-type GridProps = {
-  city: string;
-  courses: Course[];
-};
+type GridProps = { city: string; courses: Course[] };
 
 type Row = Omit<
   Course,
@@ -89,28 +107,14 @@ export const Grid = ({ city, courses }: GridProps) => {
   const [ageFilter, setAgeFilter] = useLocalStorage<{ years?: number; months?: number }>('ageFilter', {});
 
   const columnDefs: (ColDef<Row> | ColGroupDef<Row>)[] = [
-    {
-      headerName: 'Name',
-      field: 'EventName',
-      sort: 'asc',
-      pinned: 'left',
-      tooltipField: 'Details',
-      floatingFilter: true,
-    },
-    {
-      headerName: 'No.',
-      field: 'CourseIdTrimmed',
-      width: 100,
-    },
+    { headerName: 'Name', field: 'EventName', sort: 'asc', pinned: 'left', tooltipField: 'Details', floatingFilter: true },
+    { headerName: 'No.', field: 'CourseIdTrimmed', width: 100 },
     {
       headerName: 'Start',
       field: 'OccurrenceMinStartDate',
       sortable: true,
       filter: 'agDateColumnFilter',
-      filterParams: {
-        type: 'greaterThan',
-        dateFrom: new Date().toISOString().split('T')[0],
-      },
+      filterParams: { type: 'greaterThan', dateFrom: new Date().toISOString().split('T')[0] },
       width: 120,
     },
     {
@@ -118,50 +122,19 @@ export const Grid = ({ city, courses }: GridProps) => {
       field: 'OccurrenceMaxStartDate',
       sortable: true,
       filter: 'agDateColumnFilter',
-      filterParams: {
-        defaultOption: 'lessThan',
-      },
+      filterParams: { defaultOption: 'lessThan' },
       width: 120,
     },
-    {
-      headerName: 'Occurs',
-      field: 'OccurrenceDescription',
-      width: 150,
-    },
-    {
-      headerName: 'Time',
-      field: 'EventTimeDescription',
-      width: 200,
-    },
-    {
-      headerName: 'Location',
-      field: 'FacilityLocation',
-      floatingFilter: true,
-      width: 300,
-    },
-    {
-      headerName: 'Min age',
-      field: 'MinimumAge',
-      valueFormatter: formatMonthsYears,
-      width: 120,
-    },
-    {
-      headerName: 'Max age',
-      field: 'MaximumAge',
-      valueFormatter: formatMonthsYears,
-      width: 120,
-    },
-    {
-      headerName: 'Price',
-      field: 'PriceRange',
-      width: 120,
-    },
+    { headerName: 'Occurs', field: 'OccurrenceDescription', width: 150 },
+    { headerName: 'Time', field: 'EventTimeDescription', width: 200 },
+    { headerName: 'Location', field: 'FacilityLocation', floatingFilter: true, width: 300 },
+    { headerName: 'Min age', field: 'MinimumAge', valueFormatter: formatMonthsYears, width: 120 },
+    { headerName: 'Max age', field: 'MaximumAge', valueFormatter: formatMonthsYears, width: 120 },
+    { headerName: 'Price', field: 'PriceRange', width: 120 },
     {
       headerName: 'Spots',
       field: 'spots',
-      filterParams: {
-        maxNumConditions: 3,
-      },
+      filterParams: { maxNumConditions: 3 },
       pinned: 'right',
       width: 120,
       cellRenderer: ({ data: { EventId }, value }: { data: Course; value: string }) => {
@@ -190,10 +163,7 @@ export const Grid = ({ city, courses }: GridProps) => {
     if (!dateFilterComponent) return;
 
     if (isTodayFilterChecked) {
-      dateFilterComponent.setModel({
-        type: 'greaterThan',
-        dateFrom: new Date().toISOString().split('T')[0],
-      });
+      dateFilterComponent.setModel({ type: 'greaterThan', dateFrom: new Date().toISOString().split('T')[0] });
     } else {
       dateFilterComponent.setModel(null);
     }
@@ -217,16 +187,8 @@ export const Grid = ({ city, courses }: GridProps) => {
         filterType: 'text',
         operator: 'OR',
         conditions: [
-          {
-            filterType: 'text',
-            type: 'contains',
-            filter: 'Sat',
-          },
-          {
-            filterType: 'text',
-            type: 'contains',
-            filter: 'Sun',
-          },
+          { filterType: 'text', type: 'contains', filter: 'Sat' },
+          { filterType: 'text', type: 'contains', filter: 'Sun' },
         ],
       });
     } else {
@@ -252,21 +214,9 @@ export const Grid = ({ city, courses }: GridProps) => {
         filterType: 'text',
         operator: 'AND',
         conditions: [
-          {
-            filterType: 'text',
-            type: 'notContains',
-            filter: 'Closed',
-          },
-          {
-            filterType: 'text',
-            type: 'notContains',
-            filter: 'Wait',
-          },
-          {
-            filterType: 'text',
-            type: 'notContains',
-            filter: 'Full',
-          },
+          { filterType: 'text', type: 'notContains', filter: 'Closed' },
+          { filterType: 'text', type: 'notContains', filter: 'Wait' },
+          { filterType: 'text', type: 'notContains', filter: 'Full' },
         ],
       });
     } else {
@@ -284,26 +234,14 @@ export const Grid = ({ city, courses }: GridProps) => {
     if (!gridRef.current?.api) return;
 
     if (ageFilter.years === undefined && ageFilter.months === undefined) {
-      gridRef.current.api.setFilterModel({
-        ...gridRef.current.api.getFilterModel(),
-        MinimumAge: null,
-        MaximumAge: null,
-      });
+      gridRef.current.api.setFilterModel({ ...gridRef.current.api.getFilterModel(), MinimumAge: null, MaximumAge: null });
     } else {
       const filter = (ageFilter.years ?? 0) + (ageFilter.months ?? 0) / 12;
 
       gridRef.current.api.setFilterModel({
         ...gridRef.current.api.getFilterModel(),
-        MinimumAge: {
-          filterType: 'number',
-          type: 'lessThanOrEqual',
-          filter,
-        },
-        MaximumAge: {
-          filterType: 'number',
-          type: 'greaterThanOrEqual',
-          filter,
-        },
+        MinimumAge: { filterType: 'number', type: 'lessThanOrEqual', filter },
+        MaximumAge: { filterType: 'number', type: 'greaterThanOrEqual', filter },
       });
     }
 
@@ -398,14 +336,13 @@ export const Grid = ({ city, courses }: GridProps) => {
       <div className="ag-theme-quartz-auto-dark">
         <AgGridReact<Row>
           ref={gridRef}
-          autoSizeStrategy={{
-            type: 'fitGridWidth',
-          }}
+          autoSizeStrategy={{ type: 'fitGridWidth' }}
           domLayout="autoHeight"
           rowData={rowData}
           columnDefs={columnDefs}
           defaultColDef={{ filter: true }}
           onGridReady={setInitialFilters}
+          theme={themeQuartz.withPart(colorSchemeDarkBlue)}
           // onFirstDataRendered={(params) => params.api.sizeColumnsToFit()}
         />
       </div>
