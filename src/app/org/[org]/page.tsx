@@ -5,10 +5,10 @@ import GetCategoriesDataV2 from '../../_services/GetCategoriesDataV2';
 import Header from '@/app/_components/Header';
 import { Locations } from '@/locations';
 
-export default async function Page({ params }: { params: Promise<{ city: string }> }) {
-  const { city } = await params;
-  const categories = await GetCategoriesDataV2(city);
-  const cityName = Locations.flatMap((location) => location.sites).find((site) => site.subdomain === city)?.name;
+export default async function Page({ params }: { params: Promise<{ org: string }> }) {
+  const { org } = await params;
+  const categories = await GetCategoriesDataV2(org);
+  const orgName = Locations.flatMap((location) => location.sites).find((site) => site.subdomain === org)?.name ?? org;
 
   if (categories.length === 0) {
     return notFound();
@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: Promise<{ city: string 
 
   return (
     <>
-      <Header title={cityName} breadcrumbs={[{ label: 'Directory', href: '/' }]} />
+      <Header title={orgName} breadcrumbs={[{ label: 'Directory', href: '/' }]} />
 
       <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-6">
         {categories
@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: Promise<{ city: string 
                     {calendars.length > 1 && (
                       <Link
                         className="text-blue-600 hover:underline dark:text-blue-400"
-                        href={`/city/${city}/calendar/${c.Calendars.map((c) => c.Id).join('/')}`}
+                        href={`/org/${org}/calendar/${c.Calendars.map((c) => c.Id).join('/')}`}
                       >
                         All
                       </Link>
@@ -44,7 +44,7 @@ export default async function Page({ params }: { params: Promise<{ city: string 
                   {calendars.map((calendar, i) => {
                     return (
                       <li key={i}>
-                        <Link className="text-blue-600 hover:underline dark:text-blue-400" href={`/city/${city}/calendar/${calendar.Id}`}>
+                        <Link className="text-blue-600 hover:underline dark:text-blue-400" href={`/org/${org}/calendar/${calendar.Id}`}>
                           {calendar.Name}
                         </Link>
                       </li>

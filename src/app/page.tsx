@@ -17,7 +17,7 @@ export default async function Home() {
               <ul className="space-y-2">
                 {sites.map((l, i) => (
                   <li className="my-2" key={i}>
-                    <Link className="text-blue-600 hover:underline dark:text-blue-400" href={`/city/${l.subdomain}`}>
+                    <Link className="text-blue-600 hover:underline dark:text-blue-400" href={`/org/${l.subdomain}`}>
                       {l.name}
                     </Link>
                   </li>

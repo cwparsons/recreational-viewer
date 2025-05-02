@@ -11,8 +11,8 @@ const Grid = dynamic(() => import('@/app/_components/Grid').then((module) => mod
 
 const CONCURRENCY_LIMIT = 8;
 
-export default async function Page({ params }: { params: Promise<{ city: string; ids: string[] }> }) {
-  const { city, ids } = await params;
+export default async function Page({ params }: { params: Promise<{ org: string; ids: string[] }> }) {
+  const { org, ids } = await params;
 
   const courses: Course[] = [];
 
@@ -22,7 +22,7 @@ export default async function Page({ params }: { params: Promise<{ city: string;
 
       await Promise.all(
         batch.map(async (id) => {
-          const data = await CoursesV2(city, id);
+          const data = await CoursesV2(org, id);
           courses.push(...data.courses);
         })
       );
@@ -31,9 +31,9 @@ export default async function Page({ params }: { params: Promise<{ city: string;
 
   await executeInBatches();
 
-  const cityName = Locations.flatMap((location) => location.sites).find((site) => site.subdomain === city)?.name;
+  const orgName = Locations.flatMap((location) => location.sites).find((site) => site.subdomain === org)?.name ?? org;
 
-  const categories = await GetCategoriesDataV2(city);
+  const categories = await GetCategoriesDataV2(org);
   const currentCategory = categories.find((c) => c.Calendars.some((cal) => cal.Id === ids[0]));
   const currentCalendar = currentCategory?.Calendars.find((c) => c.Id === ids[0]);
   const title = ids.length > 1 ? currentCategory?.Name : `${currentCalendar?.Name} - ${currentCategory?.Name}`;
@@ -44,12 +44,12 @@ export default async function Page({ params }: { params: Promise<{ city: string;
         title={title}
         breadcrumbs={[
           { label: 'Directory', href: '/' },
-          { label: cityName ?? '', href: `/city/${city}` },
+          { label: orgName, href: `/org/${org}` },
         ]}
       />
 
       <div className="grow">
-        <Grid city={city} courses={courses} />
+        <Grid org={org} courses={courses} />
       </div>
     </div>
   );

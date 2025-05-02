@@ -31,7 +31,7 @@ ModuleRegistry.registerModules([
   ValidationModule,
 ]);
 
-type GridProps = { city: string; courses: Course[] };
+type GridProps = { org: string; courses: Course[] };
 
 type Row = Omit<
   Course,
@@ -77,7 +77,7 @@ function determineSpotsStatus(spots: string, text: string) {
   return text;
 }
 
-export const Grid = ({ city, courses }: GridProps) => {
+export const Grid = ({ org, courses }: GridProps) => {
   const rowData: Row[] = courses.map((course) => ({
     ...course,
     OccurrenceMinStartDate: new Date(course.OccurrenceMinStartDate),
@@ -138,7 +138,7 @@ export const Grid = ({ city, courses }: GridProps) => {
       pinned: 'right',
       width: 120,
       cellRenderer: ({ data: { EventId }, value }: { data: Course; value: string }) => {
-        const url = `https://${city}.perfectmind.com/Clients/BookMe4LandingPages/CoursesLandingPage?courseId=${EventId}`;
+        const url = `https://${org}.perfectmind.com/Clients/BookMe4LandingPages/CoursesLandingPage?courseId=${EventId}`;
 
         return (
           <a
