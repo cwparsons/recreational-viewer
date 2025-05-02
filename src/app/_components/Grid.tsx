@@ -78,6 +78,13 @@ function determineSpotsStatus(spots: string, text: string) {
 }
 
 export const Grid = ({ org, courses }: GridProps) => {
+  const gridRef = useRef<AgGridReact<Row>>(null);
+
+  const [isTodayFilterChecked, setIsTodayFilterChecked] = useLocalStorage('isTodayFilterChecked', false);
+  const [isSpotsAvailableChecked, setIsSpotsAvailableChecked] = useLocalStorage('isSpotsAvailableChecked', false);
+  const [isWeekendFilterChecked, setIsWeekendFilterChecked] = useLocalStorage('isWeekendFilterChecked', false);
+  const [ageFilter, setAgeFilter] = useLocalStorage<{ years?: number; months?: number }>('ageFilter', {});
+
   const rowData: Row[] = courses.map((course) => ({
     ...course,
     OccurrenceMinStartDate: new Date(course.OccurrenceMinStartDate),
@@ -89,22 +96,6 @@ export const Grid = ({ org, courses }: GridProps) => {
     FacilityLocation: getFacilityLocation(course),
     spots: determineSpotsStatus(course.Spots, course.BookButtonText),
   }));
-
-  const gridRef = useRef<AgGridReact<Row>>(null);
-
-  const [isTodayFilterChecked, setIsTodayFilterChecked] = useLocalStorage(
-    'isTodayFilterChecked',
-    window.location.hash.includes('upcoming')
-  );
-  const [isSpotsAvailableChecked, setIsSpotsAvailableChecked] = useLocalStorage(
-    'isSpotsAvailableChecked',
-    window.location.hash.includes('available')
-  );
-  const [isWeekendFilterChecked, setIsWeekendFilterChecked] = useLocalStorage(
-    'isWeekendFilterChecked',
-    window.location.hash.includes('weekend')
-  );
-  const [ageFilter, setAgeFilter] = useLocalStorage<{ years?: number; months?: number }>('ageFilter', {});
 
   const columnDefs: (ColDef<Row> | ColGroupDef<Row>)[] = [
     { headerName: 'Name', field: 'EventName', sort: 'asc', pinned: 'left', tooltipField: 'Details', floatingFilter: true },
