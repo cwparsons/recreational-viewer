@@ -1,14 +1,17 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import GetCategoriesDataV2 from '../../_services/GetCategoriesDataV2';
+import { Card } from '@/app/_components/Card';
 import Header from '@/app/_components/Header';
-import { Locations } from '@/locations';
+import { getLocationBySubdomain } from '@/app/_services/LocationsService';
+
+import GetCategoriesDataV2 from '../../_services/GetCategoriesDataV2';
 
 export default async function Page({ params }: { params: Promise<{ org: string }> }) {
   const { org } = await params;
   const categories = await GetCategoriesDataV2(org);
-  const orgName = Locations.flatMap((location) => location.sites).find((site) => site.subdomain === org)?.name ?? org;
+  const location = getLocationBySubdomain(org);
+  const orgName = location?.name ?? org;
 
   if (categories.length === 0) {
     return notFound();
@@ -16,7 +19,13 @@ export default async function Page({ params }: { params: Promise<{ org: string }
 
   return (
     <>
-      <Header title={orgName} breadcrumbs={[{ label: 'Directory', href: '/' }]} />
+      <Header
+        title={orgName}
+        breadcrumbs={[
+          { label: 'Directory', href: '/' },
+          { label: orgName, href: `/org/${org}` },
+        ]}
+      />
 
       <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-6">
         {categories
@@ -26,16 +35,11 @@ export default async function Page({ params }: { params: Promise<{ org: string }
             const calendars = c.Calendars.filter((calendar) => !!calendar.BookingLink);
 
             return (
-              <div className="rounded-lg border bg-white p-6 shadow-lg dark:border-gray-700 dark:bg-gray-800" key={i}>
-                <h2 className="mb-4 text-xl font-semibold text-gray-900 md:text-2xl dark:text-gray-100">{c.Name}</h2>
-
-                <ul className="space-y-2">
+              <Card key={i} title={c.Name}>
+                <ul className="flex flex-col gap-2">
                   <li>
                     {calendars.length > 1 && (
-                      <Link
-                        className="text-blue-600 hover:underline dark:text-blue-400"
-                        href={`/org/${org}/calendar/${c.Calendars.map((c) => c.Id).join('/')}`}
-                      >
+                      <Link href={`/org/${org}/calendar/${c.Calendars.map((c) => c.Id).join('/')}`}>
                         All
                       </Link>
                     )}
@@ -44,17 +48,16 @@ export default async function Page({ params }: { params: Promise<{ org: string }
                   {calendars.map((calendar, i) => {
                     return (
                       <li key={i}>
-                        <Link className="text-blue-600 hover:underline dark:text-blue-400" href={`/org/${org}/calendar/${calendar.Id}`}>
-                          {calendar.Name}
-                        </Link>
+                        <Link href={`/org/${org}/calendar/${calendar.Id}`}>{calendar.Name}</Link>
                       </li>
                     );
                   })}
                 </ul>
-              </div>
+              </Card>
             );
           })}
       </div>
     </>
   );
 }
+

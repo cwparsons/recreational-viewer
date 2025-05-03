@@ -1,6 +1,6 @@
 'use client';
 
-import { useSyncExternalStore, useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useSyncExternalStore } from 'react';
 
 function dispatchStorageEvent(key: string, newValue: string | null) {
   window.dispatchEvent(new StorageEvent('storage', { key, newValue }));
@@ -27,15 +27,21 @@ const useLocalStorageSubscribe = (callback: (this: Window, ev: StorageEvent) => 
   return () => window.removeEventListener('storage', callback);
 };
 
-export function useLocalStorage<T>(key: string, initialValue: T): [T, React.Dispatch<React.SetStateAction<T>>] {
+export function useLocalStorage<T>(
+  key: string,
+  initialValue: T,
+): [T, React.Dispatch<React.SetStateAction<T>>] {
   const getSnapshot = () => getLocalStorageItem(key);
 
-  const store = useSyncExternalStore<string | null>(useLocalStorageSubscribe, getSnapshot, () => JSON.stringify(initialValue));
+  const store = useSyncExternalStore<string | null>(useLocalStorageSubscribe, getSnapshot, () =>
+    JSON.stringify(initialValue),
+  );
 
   const setState = useCallback(
     (v: T | ((val: T) => T)) => {
       try {
-        const nextState = typeof v === 'function' && store !== null ? (v as (val: T) => T)(JSON.parse(store)) : v;
+        const nextState =
+          typeof v === 'function' && store !== null ? (v as (val: T) => T)(JSON.parse(store)) : v;
 
         if (store === null || nextState === undefined || nextState === null) {
           removeLocalStorageItem(key);
@@ -46,7 +52,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, React.Disp
         console.warn(e);
       }
     },
-    [key, store]
+    [key, store],
   );
 
   useEffect(() => {
@@ -59,3 +65,4 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, React.Disp
 
   return [value ?? initialValue, setState];
 }
+

@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import React from 'react';
+
+import Link from 'next/link';
 
 type Breadcrumb = {
   href: string;
@@ -7,32 +8,39 @@ type Breadcrumb = {
 };
 
 type HeaderProps = {
-  title?: string;
   breadcrumbs?: Breadcrumb[];
+  title?: string;
 };
 
-const Header = ({ title, breadcrumbs }: HeaderProps) => {
+const Header = ({ breadcrumbs, title }: HeaderProps) => {
   return (
-    <header>
-      <nav className="min-h-[24px]">
-        <ol className="list-reset flex">
+    <header className="flex flex-col gap-4">
+      <nav aria-label="Breadcrumb" className="min-h-6">
+        <ol className="list-reset flex gap-2">
           {breadcrumbs?.map((crumb, index) => (
-            <li key={index} className="flex items-center">
-              <Link href={crumb.href} className="hover:text-blue-500">
+            <li className="flex items-center gap-2" key={crumb.href}>
+              <Link
+                aria-current={index === breadcrumbs.length - 1 ? 'page' : undefined}
+                href={crumb.href}
+              >
                 {crumb.label}
               </Link>
 
               {index !== breadcrumbs.length - 1 && (
                 <svg
-                  className="mx-2"
-                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  className="h-4 w-4"
                   fill="none"
-                  viewBox="0 0 24 24"
                   stroke="currentColor"
-                  width="16"
-                  height="16"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <path
+                    d="M9 5l7 7-7 7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                  />
                 </svg>
               )}
             </li>
@@ -40,9 +48,10 @@ const Header = ({ title, breadcrumbs }: HeaderProps) => {
         </ol>
       </nav>
 
-      {title && <h1 className="mb-8 text-3xl font-bold md:text-5xl">{title}</h1>}
+      {title && <h1 className="text-3xl font-bold md:text-5xl">{title}</h1>}
     </header>
   );
 };
 
 export default Header;
+
