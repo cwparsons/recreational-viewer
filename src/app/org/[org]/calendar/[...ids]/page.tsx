@@ -21,20 +21,20 @@ export default async function Page({
 
   const courses: Course[] = [];
 
-  const executeInBatches = async () => {
+  const executeInBatches = async function <T>(
+    ids: T[],
+    callback: (id: T) => Promise<void>,
+  ): Promise<void> {
     for (let i = 0; i < ids.length; i += CONCURRENCY_LIMIT) {
       const batch = ids.slice(i, i + CONCURRENCY_LIMIT);
-
-      await Promise.all(
-        batch.map(async (id) => {
-          const data = await CoursesV2(org, id);
-          courses.push(...data.courses);
-        }),
-      );
+      await Promise.all(batch.map(callback));
     }
   };
 
-  await executeInBatches();
+  await executeInBatches(ids, async (id) => {
+    const data = await CoursesV2(org, id);
+    courses.push(...data.courses);
+  });
 
   const location = getLocationBySubdomain(org);
   const orgName = location?.name ?? org;

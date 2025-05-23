@@ -234,7 +234,7 @@ export const Grid = ({ org, courses }: GridProps) => {
 
   return (
     <div className="flex flex-col gap-4">
-      <form className="flex gap-6 rounded-lg border bg-white px-4 py-3 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+      <form className="flex flex-wrap gap-6 rounded-lg border bg-white px-4 py-3 shadow-lg dark:border-gray-700 dark:bg-gray-800">
         <Checkbox
           checked={filters.upcoming}
           onChange={(checked) => setFilters({ ...filters, upcoming: checked })}
