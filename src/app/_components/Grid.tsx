@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useLayoutEffect, useRef } from 'react';
+import { useCallback, useLayoutEffect, useRef, useState } from 'react';
 
 import Link from 'next/link';
 
@@ -19,6 +19,9 @@ import { AgGridReact } from 'ag-grid-react';
 
 import { useLocalStorage } from '@/app/_hooks/use-location-storage';
 import { type Course } from '@/types/CoursesV2Response';
+
+import { formatOccurrenceDescription } from '../_lib/format-occurrence-description';
+import { Checkbox } from './Checkbox';
 
 ModuleRegistry.registerModules([
   ClientSideRowModelModule,
@@ -42,26 +45,6 @@ type Row = Omit<Course, 'OccurrenceMinStartDate' | 'OccurrenceMaxStartDate'> & {
   spots: string;
 };
 
-const Checkbox = ({
-  checked,
-  onChange,
-  label,
-}: {
-  checked: boolean;
-  onChange: (checked: boolean) => void;
-  label: string;
-}) => (
-  <label className="flex cursor-pointer items-center gap-2">
-    <input
-      checked={checked}
-      className="h-5 w-5"
-      onChange={(e) => onChange(e.target.checked)}
-      type="checkbox"
-    />
-    <span>{label}</span>
-  </label>
-);
-
 const valueFormatter = ({ value }: { value: number }) => {
   const totalMonths = Math.round(value * 12);
   const years = Math.floor(totalMonths / 12);
@@ -72,13 +55,21 @@ const valueFormatter = ({ value }: { value: number }) => {
 
 export const Grid = ({ org, courses }: GridProps) => {
   const gridRef = useRef<AgGridReact<Row>>(null);
-
   const [filters, setFilters] = useLocalStorage('courseFilters', {
     upcoming: false,
     spotsAvailable: false,
     weekend: false,
     age: { years: undefined as number | undefined, months: undefined as number | undefined },
   });
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  // Responsive check
+  useLayoutEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth > 1024);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   // Process row data
   const rowData: Row[] = courses.map((course) => ({
@@ -158,13 +149,40 @@ export const Grid = ({ org, courses }: GridProps) => {
     },
   ];
 
-  // Apply filters to grid
+  // Apply filters to grid and for mobile
+  const filterRowData = useCallback(
+    (data: Row[]) => {
+      return data.filter((row) => {
+        // Upcoming events filter
+        if (filters.upcoming) {
+          const today = new Date();
+          if (row.OccurrenceMinStartDate < new Date(today.toISOString().split('T')[0]))
+            return false;
+        }
+        // Weekend filter
+        if (filters.weekend) {
+          if (!/Sat|Sun/.test(row.OccurrenceDescription)) return false;
+        }
+        // Available spots filter
+        if (filters.spotsAvailable) {
+          if (/Closed|Wait|Full/i.test(row.spots)) return false;
+        }
+        // Age filter
+        if (filters.age.years !== undefined || filters.age.months !== undefined) {
+          const ageValue = (filters.age.years ?? 0) + (filters.age.months ?? 0) / 12;
+          if (!(row.MinimumAge <= ageValue && row.MaximumAge >= ageValue)) return false;
+        }
+        return true;
+      });
+    },
+    [filters],
+  );
+
+  // Reintroduce applyFilters for ag-Grid only
   const applyFilters = useCallback(async () => {
     if (!gridRef.current?.api) return;
-
     // Build filter model
     const filterModel: any = {};
-
     // Upcoming events filter
     if (filters.upcoming) {
       filterModel.OccurrenceMinStartDate = {
@@ -172,7 +190,6 @@ export const Grid = ({ org, courses }: GridProps) => {
         dateFrom: new Date().toISOString().split('T')[0],
       };
     }
-
     // Weekend filter
     if (filters.weekend) {
       filterModel.OccurrenceDescription = {
@@ -184,7 +201,6 @@ export const Grid = ({ org, courses }: GridProps) => {
         ],
       };
     }
-
     // Available spots filter
     if (filters.spotsAvailable) {
       filterModel.spots = {
@@ -197,24 +213,20 @@ export const Grid = ({ org, courses }: GridProps) => {
         ],
       };
     }
-
     // Age filter
     if (filters.age.years !== undefined || filters.age.months !== undefined) {
       const ageValue = (filters.age.years ?? 0) + (filters.age.months ?? 0) / 12;
-
       filterModel.MinimumAge = {
         filterType: 'number',
         type: 'lessThanOrEqual',
         filter: ageValue,
       };
-
       filterModel.MaximumAge = {
         filterType: 'number',
         type: 'greaterThanOrEqual',
         filter: ageValue,
       };
     }
-
     gridRef.current?.api.setFilterModel(filterModel);
   }, [filters, gridRef]);
 
@@ -299,16 +311,95 @@ export const Grid = ({ org, courses }: GridProps) => {
         </button>
       </form>
 
-      <AgGridReact
-        autoSizeStrategy={{ type: 'fitGridWidth' }}
-        columnDefs={columnDefs}
-        defaultColDef={{ filter: true }}
-        domLayout="autoHeight"
-        onGridReady={applyFilters}
-        ref={gridRef}
-        rowData={rowData}
-        theme={themeQuartz.withPart(colorSchemeDarkBlue)}
-      />
+      {/* Desktop grid */}
+      {isDesktop && (
+        <AgGridReact
+          autoSizeStrategy={{ type: 'fitGridWidth' }}
+          columnDefs={columnDefs}
+          defaultColDef={{ filter: true }}
+          domLayout="autoHeight"
+          onGridReady={applyFilters}
+          ref={gridRef}
+          rowData={rowData}
+          theme={themeQuartz.withPart(colorSchemeDarkBlue)}
+        />
+      )}
+
+      {/* Mobile table using <details>/<summary> */}
+      {!isDesktop && (
+        <div className="flex flex-col gap-2">
+          {filterRowData(rowData)
+            .sort((a, b) => a.EventName.localeCompare(b.EventName))
+            .map((row) => {
+              const href = `https://${org}.perfectmind.com/Clients/BookMe4LandingPages/CoursesLandingPage?courseId=${row.EventId}`;
+              return (
+                <details
+                  key={row.EventId}
+                  className="rounded-lg border bg-white px-4 py-3 shadow dark:border-gray-700 dark:bg-gray-800"
+                >
+                  <summary className="flex cursor-pointer items-center justify-between gap-4">
+                    {formatOccurrenceDescription(
+                      row.EventName,
+                      row.OccurrenceMinStartDate,
+                      row.OccurrenceDescription,
+                    )}
+                    <Link
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whitespace-nowrap text-blue-600 underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {row.spots}
+                    </Link>
+                  </summary>
+                  <table className="mt-2 w-full text-sm">
+                    <tbody>
+                      <tr>
+                        <th className="pr-2 text-start font-semibold">No.:</th>
+                        <td>{row.CourseIdTrimmed}</td>
+                      </tr>
+                      <tr>
+                        <th className="pr-2 text-start font-semibold">Start:</th>
+                        <td>{row.OccurrenceMinStartDate.toLocaleDateString()}</td>
+                      </tr>
+                      {row.OccurrenceMaxStartDate && (
+                        <tr>
+                          <th className="pr-2 text-start font-semibold">End:</th>
+                          <td>{row.OccurrenceMaxStartDate.toLocaleDateString()}</td>
+                        </tr>
+                      )}
+                      <tr>
+                        <th className="pr-2 text-start font-semibold">Occurs:</th>
+                        <td>{row.OccurrenceDescription}</td>
+                      </tr>
+                      <tr>
+                        <th className="pr-2 text-start font-semibold">Time:</th>
+                        <td>{row.EventTimeDescription}</td>
+                      </tr>
+                      <tr>
+                        <th className="pr-2 text-start font-semibold">Location:</th>
+                        <td>{row.FacilityLocation}</td>
+                      </tr>
+                      <tr>
+                        <th className="pr-2 text-start font-semibold">Min age:</th>
+                        <td>{valueFormatter({ value: row.MinimumAge })}</td>
+                      </tr>
+                      <tr>
+                        <th className="pr-2 text-start font-semibold">Max age:</th>
+                        <td>{valueFormatter({ value: row.MaximumAge })}</td>
+                      </tr>
+                      <tr>
+                        <th className="pr-2 text-start font-semibold">Price:</th>
+                        <td>{row.PriceRange}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </details>
+              );
+            })}
+        </div>
+      )}
     </div>
   );
 };
