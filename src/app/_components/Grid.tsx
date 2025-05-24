@@ -355,43 +355,51 @@ export const Grid = ({ org, courses }: GridProps) => {
                   </summary>
                   <table className="mt-2 w-full text-sm">
                     <tbody>
-                      <tr>
-                        <th className="pr-2 text-start font-semibold">No.:</th>
-                        <td>{row.CourseIdTrimmed}</td>
+                      <tr hidden>
+                        <th className="pt-2 pr-4 text-start align-top font-semibold">Number:</th>
+                        <td className="pt-2">{row.CourseIdTrimmed}</td>
                       </tr>
                       <tr>
-                        <th className="pr-2 text-start font-semibold">Start:</th>
-                        <td>{row.OccurrenceMinStartDate.toLocaleDateString()}</td>
+                        <th className="pt-2 pr-4 text-start align-top font-semibold">
+                          Description:
+                        </th>
+                        <td className="pt-2">{row.Details}</td>
+                      </tr>
+                      <tr>
+                        <th className="pt-2 pr-4 text-start align-top font-semibold">Start:</th>
+                        <td className="pt-2">{row.OccurrenceMinStartDate.toLocaleDateString()}</td>
                       </tr>
                       {row.OccurrenceMaxStartDate && (
                         <tr>
-                          <th className="pr-2 text-start font-semibold">End:</th>
-                          <td>{row.OccurrenceMaxStartDate.toLocaleDateString()}</td>
+                          <th className="pt-2 pr-4 text-start align-top font-semibold">End:</th>
+                          <td className="pt-2">
+                            {row.OccurrenceMaxStartDate.toLocaleDateString()}
+                          </td>
                         </tr>
                       )}
                       <tr>
-                        <th className="pr-2 text-start font-semibold">Occurs:</th>
-                        <td>{row.OccurrenceDescription}</td>
+                        <th className="pt-2 pr-4 text-start align-top font-semibold">Occurs:</th>
+                        <td className="pt-2">{row.OccurrenceDescription}</td>
                       </tr>
                       <tr>
-                        <th className="pr-2 text-start font-semibold">Time:</th>
-                        <td>{row.EventTimeDescription}</td>
+                        <th className="pt-2 pr-4 text-start align-top font-semibold">Time:</th>
+                        <td className="pt-2">{row.EventTimeDescription}</td>
                       </tr>
                       <tr>
-                        <th className="pr-2 text-start font-semibold">Location:</th>
-                        <td>{row.FacilityLocation}</td>
+                        <th className="pt-2 pr-4 text-start align-top font-semibold">Location:</th>
+                        <td className="pt-2">{row.FacilityLocation}</td>
                       </tr>
                       <tr>
-                        <th className="pr-2 text-start font-semibold">Min age:</th>
-                        <td>{valueFormatter({ value: row.MinimumAge })}</td>
+                        <th className="pt-2 pr-4 text-start align-top font-semibold">Min age:</th>
+                        <td className="pt-2">{valueFormatter({ value: row.MinimumAge })}</td>
                       </tr>
                       <tr>
-                        <th className="pr-2 text-start font-semibold">Max age:</th>
-                        <td>{valueFormatter({ value: row.MaximumAge })}</td>
+                        <th className="pt-2 pr-4 text-start align-top font-semibold">Max age:</th>
+                        <td className="pt-2">{valueFormatter({ value: row.MaximumAge })}</td>
                       </tr>
                       <tr>
-                        <th className="pr-2 text-start font-semibold">Price:</th>
-                        <td>{row.PriceRange}</td>
+                        <th className="pt-2 pr-4 text-start align-top font-semibold">Price:</th>
+                        <td className="pt-2">{row.PriceRange}</td>
                       </tr>
                     </tbody>
                   </table>
