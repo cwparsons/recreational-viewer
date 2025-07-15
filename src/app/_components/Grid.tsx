@@ -62,13 +62,31 @@ export const Grid = ({ org, courses }: GridProps) => {
     age: { years: undefined as number | undefined, months: undefined as number | undefined },
   });
   const [isDesktop, setIsDesktop] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Responsive check
+  // Responsive check using ResizeObserver
   useLayoutEffect(() => {
     const check = () => setIsDesktop(window.innerWidth > 1024);
     check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
+
+    const resizeObserver = new ResizeObserver(() => {
+      check();
+    });
+
+    resizeObserver.observe(document.body);
+
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  // Dark mode detection
+  useLayoutEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDarkMode(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   // Process row data
@@ -321,7 +339,7 @@ export const Grid = ({ org, courses }: GridProps) => {
           onGridReady={applyFilters}
           ref={gridRef}
           rowData={rowData}
-          theme={themeQuartz.withPart(colorSchemeDarkBlue)}
+          theme={isDarkMode ? themeQuartz.withPart(colorSchemeDarkBlue) : themeQuartz}
         />
       )}
 
