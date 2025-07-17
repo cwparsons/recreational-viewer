@@ -18,10 +18,12 @@ import {
 import { AgGridReact } from 'ag-grid-react';
 
 import { useLocalStorage } from '@/app/_hooks/use-location-storage';
+import { useFavourites } from '@/app/_hooks/use-favourites';
 import { type Course } from '@/types/CoursesV2Response';
 
 import { formatOccurrenceDescription } from '../_lib/format-occurrence-description';
 import { Checkbox } from './Checkbox';
+import { HeartIcon } from './HeartIcon';
 
 ModuleRegistry.registerModules([
   ClientSideRowModelModule,
@@ -55,6 +57,7 @@ const valueFormatter = ({ value }: { value: number }) => {
 
 export const Grid = ({ org, courses }: GridProps) => {
   const gridRef = useRef<AgGridReact<Row>>(null);
+  const { isFavourite, toggleFavourite } = useFavourites();
   const [filters, setFilters] = useLocalStorage('courseFilters', {
     upcoming: false,
     spotsAvailable: false,
@@ -118,6 +121,31 @@ export const Grid = ({ org, courses }: GridProps) => {
       pinned: 'left',
       tooltipField: 'Details',
       floatingFilter: true,
+    },
+            {
+      headerName: '',
+      width: 60,
+      minWidth: 60,
+      maxWidth: 60,
+      resizable: false,
+      sortable: false,
+      filter: false,
+      pinned: 'left',
+      suppressAutoSize: true,
+      suppressSizeToFit: true,
+      cellRenderer: ({ data }: { data: Row }) => {
+        const originalCourse = courses.find(course => course.EventId === data.EventId);
+        if (!originalCourse) return null;
+
+        return (
+          <div className="flex items-center justify-center h-full">
+            <HeartIcon
+              filled={isFavourite(data.EventId)}
+              onClick={() => toggleFavourite(originalCourse, org)}
+            />
+          </div>
+        );
+      },
     },
     { headerName: 'No.', field: 'CourseIdTrimmed', width: 100 },
     {
@@ -356,11 +384,20 @@ export const Grid = ({ org, courses }: GridProps) => {
                   className="rounded-lg border bg-white px-4 py-3 shadow dark:border-gray-700 dark:bg-gray-800"
                 >
                   <summary className="flex cursor-pointer items-center justify-between gap-4">
-                    {formatOccurrenceDescription(
-                      row.EventName,
-                      row.OccurrenceMinStartDate,
-                      row.OccurrenceDescription,
-                    )}
+                    <div className="flex items-center gap-2">
+                                             <HeartIcon
+                         filled={isFavourite(row.EventId)}
+                         onClick={() => {
+                           const originalCourse = courses.find(course => course.EventId === row.EventId);
+                           if (originalCourse) toggleFavourite(originalCourse, org);
+                         }}
+                       />
+                      {formatOccurrenceDescription(
+                        row.EventName,
+                        row.OccurrenceMinStartDate,
+                        row.OccurrenceDescription,
+                      )}
+                    </div>
                     <Link
                       href={href}
                       target="_blank"
