@@ -9,27 +9,27 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "ag-grid-community": "34.3.1",
-    "ag-grid-react": "34.3.1",
-    "got": "14.6.5",
-    "next": "16.0.7",
-    "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "ag-grid-community": "35.0.0",
+    "ag-grid-react": "35.0.0",
+    "got": "14.6.6",
+    "next": "16.1.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "4.1.17",
-    "@types/node": "24.10.1",
-    "@types/react": "19.2.7",
+    "@tailwindcss/postcss": "4.1.18",
+    "@types/node": "25.0.9",
+    "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
-    "eslint": "9.39.1",
-    "eslint-config-next": "16.0.7",
+    "eslint": "9.39.2",
+    "eslint-config-next": "16.1.4",
     "postcss": "8.5.6",
-    "prettier": "3.7.4",
+    "prettier": "3.8.1",
     "prettier-plugin-tailwindcss": "0.7.2",
     "typescript": "5.9.3"
   },
   "overrides": {
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3"
   }
 }
