@@ -1,7 +1,9 @@
 'use client';
 
 import { useEffect } from 'react';
+
 import Link from 'next/link';
+
 import Header from '@/app/_components/Header';
 
 export default function Error({
@@ -28,13 +30,13 @@ export default function Error({
         <div className="flex gap-4">
           <button
             onClick={reset}
-            className="rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 transition-colors"
+            className="rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
           >
             Try again
           </button>
           <Link
             href="/"
-            className="rounded-lg border border-gray-300 px-4 py-2 hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-800 transition-colors"
+            className="rounded-lg border border-gray-300 px-4 py-2 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-800"
           >
             Back to directory
           </Link>

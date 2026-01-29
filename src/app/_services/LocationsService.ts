@@ -15,5 +15,7 @@ export const getLocations = (): LocationGroup[] => {
 };
 
 export const getLocationBySubdomain = (subdomain: string): Location | undefined => {
-  return LocationsData.flatMap((location) => location.sites).find((site) => site.subdomain === subdomain);
+  return LocationsData.flatMap((location) => location.sites).find(
+    (site) => site.subdomain === subdomain,
+  );
 };

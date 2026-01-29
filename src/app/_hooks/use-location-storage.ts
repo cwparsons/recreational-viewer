@@ -65,4 +65,3 @@ export function useLocalStorage<T>(
 
   return [value ?? initialValue, setState];
 }
-

@@ -1,7 +1,9 @@
 'use client';
 
 import { useCallback } from 'react';
+
 import { Course } from '@/types/CoursesV2Response';
+
 import { useLocalStorage } from './use-location-storage';
 
 export interface FavouriteCourse {
@@ -14,28 +16,28 @@ export function useFavourites() {
 
   const isFavourite = useCallback(
     (courseId: string): boolean => {
-      return favourites.some(fav => fav.course.EventId === courseId);
+      return favourites.some((fav) => fav.course.EventId === courseId);
     },
-    [favourites]
+    [favourites],
   );
 
   const addFavourite = useCallback(
     (course: Course, org: string) => {
-      setFavourites(prev => {
-        if (prev.some(fav => fav.course.EventId === course.EventId)) {
+      setFavourites((prev) => {
+        if (prev.some((fav) => fav.course.EventId === course.EventId)) {
           return prev; // Already favourited
         }
         return [...prev, { course, org }];
       });
     },
-    [setFavourites]
+    [setFavourites],
   );
 
   const removeFavourite = useCallback(
     (courseId: string) => {
-      setFavourites(prev => prev.filter(fav => fav.course.EventId !== courseId));
+      setFavourites((prev) => prev.filter((fav) => fav.course.EventId !== courseId));
     },
-    [setFavourites]
+    [setFavourites],
   );
 
   const toggleFavourite = useCallback(
@@ -46,7 +48,7 @@ export function useFavourites() {
         addFavourite(course, org);
       }
     },
-    [isFavourite, addFavourite, removeFavourite]
+    [isFavourite, addFavourite, removeFavourite],
   );
 
   return {

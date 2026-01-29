@@ -1,4 +1,4 @@
-import { memo, ComponentProps } from 'react';
+import { ComponentProps, memo } from 'react';
 
 type CardProps = ComponentProps<'div'> & {
   title: string;

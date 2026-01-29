@@ -1,6 +1,6 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import type { Metadata } from 'next';
 
 import { Card } from '@/app/_components/Card';
 import Header from '@/app/_components/Header';
@@ -8,11 +8,15 @@ import { getLocationBySubdomain } from '@/app/_services/LocationsService';
 
 import GetCategoriesDataV2 from '../../_services/GetCategoriesDataV2';
 
-export async function generateMetadata({ params }: { params: Promise<{ org: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ org: string }>;
+}): Promise<Metadata> {
   const { org } = await params;
   const location = getLocationBySubdomain(org);
   const orgName = location?.name ?? org;
-  
+
   return {
     title: `${orgName} - Recreational Courses`,
     description: `Browse recreational courses and activities in ${orgName}`,
@@ -51,7 +55,9 @@ export default async function Page({ params }: { params: Promise<{ org: string }
                 <ul className="flex flex-col gap-2">
                   <li>
                     {calendars.length > 1 && (
-                      <Link href={`/org/${org}/calendar/${c.Calendars.map((cal) => cal.Id).join('/')}`}>
+                      <Link
+                        href={`/org/${org}/calendar/${c.Calendars.map((cal) => cal.Id).join('/')}`}
+                      >
                         All
                       </Link>
                     )}
@@ -72,4 +78,3 @@ export default async function Page({ params }: { params: Promise<{ org: string }
     </>
   );
 }
-

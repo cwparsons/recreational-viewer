@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+
 import Header from './_components/Header';
 
 export default function Error({
@@ -23,7 +24,7 @@ export default function Error({
         </p>
         <button
           onClick={reset}
-          className="rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 transition-colors"
+          className="rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
         >
           Try again
         </button>

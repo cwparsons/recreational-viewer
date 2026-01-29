@@ -17,12 +17,16 @@ import {
 } from 'ag-grid-community';
 import { AgGridReact } from 'ag-grid-react';
 
-import { useLocalStorage } from '@/app/_hooks/use-location-storage';
 import { useFavourites } from '@/app/_hooks/use-favourites';
+import { useLocalStorage } from '@/app/_hooks/use-location-storage';
 import { type Course } from '@/types/CoursesV2Response';
 
+import {
+  type FormattedCourse,
+  formatAgeDisplay,
+  formatCourseData,
+} from '../_lib/format-course-data';
 import { formatOccurrenceDescription } from '../_lib/format-occurrence-description';
-import { formatCourseData, formatAgeDisplay, type FormattedCourse } from '../_lib/format-course-data';
 import { Checkbox } from './Checkbox';
 import { HeartIcon } from './HeartIcon';
 
@@ -48,11 +52,13 @@ export const Grid = ({ org, courses }: GridProps) => {
     weekend: false,
     age: { years: undefined as number | undefined, months: undefined as number | undefined },
   });
-  const [isDesktop, setIsDesktop] = useState(() => 
-    typeof window !== 'undefined' ? window.innerWidth > 1024 : true
+  const [isDesktop, setIsDesktop] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth > 1024 : true,
   );
-  const [isDarkMode, setIsDarkMode] = useState(() => 
-    typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)').matches : false
+  const [isDarkMode, setIsDarkMode] = useState(() =>
+    typeof window !== 'undefined'
+      ? window.matchMedia('(prefers-color-scheme: dark)').matches
+      : false,
   );
 
   // Responsive check using ResizeObserver
@@ -80,87 +86,90 @@ export const Grid = ({ org, courses }: GridProps) => {
   const rowData = useMemo(() => courses.map(formatCourseData), [courses]);
 
   // Column definitions with memoization
-  const columnDefs: ColDef<FormattedCourse>[] = useMemo(() => [
-    {
-      headerName: 'Name',
-      field: 'EventName',
-      sort: 'asc',
-      pinned: 'left',
-      tooltipField: 'Details',
-      floatingFilter: true,
-    },
-            {
-      headerName: '',
-      width: 60,
-      minWidth: 60,
-      maxWidth: 60,
-      resizable: false,
-      sortable: false,
-      filter: false,
-      pinned: 'left',
-      suppressAutoSize: true,
-      suppressSizeToFit: true,
-      cellRenderer: ({ data }: { data: FormattedCourse }) => {
-        const originalCourse = courses.find(course => course.EventId === data.EventId);
-        if (!originalCourse) return null;
-
-        return (
-          <div className="flex items-center justify-center h-full">
-            <HeartIcon
-              filled={isFavourite(data.EventId)}
-              onClick={() => toggleFavourite(originalCourse, org)}
-            />
-          </div>
-        );
+  const columnDefs: ColDef<FormattedCourse>[] = useMemo(
+    () => [
+      {
+        headerName: 'Name',
+        field: 'EventName',
+        sort: 'asc',
+        pinned: 'left',
+        tooltipField: 'Details',
+        floatingFilter: true,
       },
-    },
-    { headerName: 'No.', field: 'CourseIdTrimmed', width: 100 },
-    {
-      headerName: 'Start',
-      field: 'OccurrenceMinStartDate',
-      sortable: true,
-      filter: 'agDateColumnFilter',
-      width: 120,
-    },
-    {
-      headerName: 'End',
-      field: 'OccurrenceMaxStartDate',
-      sortable: true,
-      filter: 'agDateColumnFilter',
-      width: 120,
-    },
-    { headerName: 'Occurs', field: 'OccurrenceDescription', width: 150 },
-    { headerName: 'Time', field: 'EventTimeDescription', width: 200 },
-    { headerName: 'Location', field: 'FacilityLocation', floatingFilter: true, width: 300 },
-    {
-      headerName: 'Min age',
-      field: 'MinimumAge',
-      valueFormatter: ({ value }: { value: number }) => formatAgeDisplay(value),
-      width: 120,
-    },
-    {
-      headerName: 'Max age',
-      field: 'MaximumAge',
-      valueFormatter: ({ value }: { value: number }) => formatAgeDisplay(value),
-      width: 120,
-    },
-    { headerName: 'Price', field: 'PriceRange', width: 120 },
-    {
-      headerName: 'Spots',
-      field: 'spots',
-      pinned: 'right',
-      width: 120,
-      cellRenderer: ({ data, value }: { data: FormattedCourse; value: string }) => {
-        const href = `https://${org}.perfectmind.com/Clients/BookMe4LandingPages/CoursesLandingPage?courseId=${data.EventId}`;
+      {
+        headerName: '',
+        width: 60,
+        minWidth: 60,
+        maxWidth: 60,
+        resizable: false,
+        sortable: false,
+        filter: false,
+        pinned: 'left',
+        suppressAutoSize: true,
+        suppressSizeToFit: true,
+        cellRenderer: ({ data }: { data: FormattedCourse }) => {
+          const originalCourse = courses.find((course) => course.EventId === data.EventId);
+          if (!originalCourse) return null;
 
-        return (
-          <Link href={href} target="_blank" rel="noopener noreferrer">
-            {value}
-          </Link>
-        );
+          return (
+            <div className="flex h-full items-center justify-center">
+              <HeartIcon
+                filled={isFavourite(data.EventId)}
+                onClick={() => toggleFavourite(originalCourse, org)}
+              />
+            </div>
+          );
+        },
       },
-    },
-  ], [org, courses, isFavourite, toggleFavourite]);
+      { headerName: 'No.', field: 'CourseIdTrimmed', width: 100 },
+      {
+        headerName: 'Start',
+        field: 'OccurrenceMinStartDate',
+        sortable: true,
+        filter: 'agDateColumnFilter',
+        width: 120,
+      },
+      {
+        headerName: 'End',
+        field: 'OccurrenceMaxStartDate',
+        sortable: true,
+        filter: 'agDateColumnFilter',
+        width: 120,
+      },
+      { headerName: 'Occurs', field: 'OccurrenceDescription', width: 150 },
+      { headerName: 'Time', field: 'EventTimeDescription', width: 200 },
+      { headerName: 'Location', field: 'FacilityLocation', floatingFilter: true, width: 300 },
+      {
+        headerName: 'Min age',
+        field: 'MinimumAge',
+        valueFormatter: ({ value }: { value: number }) => formatAgeDisplay(value),
+        width: 120,
+      },
+      {
+        headerName: 'Max age',
+        field: 'MaximumAge',
+        valueFormatter: ({ value }: { value: number }) => formatAgeDisplay(value),
+        width: 120,
+      },
+      { headerName: 'Price', field: 'PriceRange', width: 120 },
+      {
+        headerName: 'Spots',
+        field: 'spots',
+        pinned: 'right',
+        width: 120,
+        cellRenderer: ({ data, value }: { data: FormattedCourse; value: string }) => {
+          const href = `https://${org}.perfectmind.com/Clients/BookMe4LandingPages/CoursesLandingPage?courseId=${data.EventId}`;
+
+          return (
+            <Link href={href} target="_blank" rel="noopener noreferrer">
+              {value}
+            </Link>
+          );
+        },
+      },
+    ],
+    [org, courses, isFavourite, toggleFavourite],
+  );
 
   // Apply filters to grid and for mobile
   const filterRowData = useCallback(
@@ -352,13 +361,15 @@ export const Grid = ({ org, courses }: GridProps) => {
                 >
                   <summary className="flex cursor-pointer items-center justify-between gap-4">
                     <div className="flex items-center gap-2">
-                                             <HeartIcon
-                         filled={isFavourite(row.EventId)}
-                         onClick={() => {
-                           const originalCourse = courses.find(course => course.EventId === row.EventId);
-                           if (originalCourse) toggleFavourite(originalCourse, org);
-                         }}
-                       />
+                      <HeartIcon
+                        filled={isFavourite(row.EventId)}
+                        onClick={() => {
+                          const originalCourse = courses.find(
+                            (course) => course.EventId === row.EventId,
+                          );
+                          if (originalCourse) toggleFavourite(originalCourse, org);
+                        }}
+                      />
                       {formatOccurrenceDescription(
                         row.EventName,
                         row.OccurrenceMinStartDate,
@@ -433,4 +444,3 @@ export const Grid = ({ org, courses }: GridProps) => {
     </div>
   );
 };
-

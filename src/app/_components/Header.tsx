@@ -52,4 +52,3 @@ const Header = ({ breadcrumbs, title }: HeaderProps) => {
 };
 
 export default Header;
-

@@ -1,6 +1,9 @@
 import { Course } from '@/types/CoursesV2Response';
 
-export interface FormattedCourse extends Omit<Course, 'OccurrenceMinStartDate' | 'OccurrenceMaxStartDate'> {
+export interface FormattedCourse extends Omit<
+  Course,
+  'OccurrenceMinStartDate' | 'OccurrenceMaxStartDate'
+> {
   OccurrenceMinStartDate: Date;
   OccurrenceMaxStartDate?: Date;
   MinimumAge: number;

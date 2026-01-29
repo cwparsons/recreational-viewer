@@ -31,4 +31,3 @@ export function formatOccurrenceDescription(
   }
   return `${eventName} (starts ${occurrenceMinStartDate.toLocaleString('default', { month: 'long' })}, ${occurs.replace('Every', 'every')})`;
 }
-

@@ -1,7 +1,9 @@
 'use client';
 
 import { useEffect } from 'react';
+
 import { useRouter } from 'next/navigation';
+
 import Header from '@/app/_components/Header';
 
 export default function Error({
@@ -19,10 +21,7 @@ export default function Error({
 
   return (
     <>
-      <Header
-        title={'Error loading courses'}
-        breadcrumbs={[{ label: 'Directory', href: '/' }]}
-      />
+      <Header title={'Error loading courses'} breadcrumbs={[{ label: 'Directory', href: '/' }]} />
       <div className="flex flex-col items-center justify-center gap-4 py-12">
         <p className="text-gray-600 dark:text-gray-400">
           We couldn&apos;t load the courses for this calendar.
@@ -30,13 +29,13 @@ export default function Error({
         <div className="flex gap-4">
           <button
             onClick={reset}
-            className="rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 transition-colors"
+            className="rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
           >
             Try again
           </button>
           <button
             onClick={() => router.back()}
-            className="rounded-lg border border-gray-300 px-4 py-2 hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-800 transition-colors"
+            className="rounded-lg border border-gray-300 px-4 py-2 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-800"
           >
             Go back
           </button>

@@ -1,5 +1,5 @@
-import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 
 import Header from '@/app/_components/Header';
 import CoursesV2 from '@/app/_services/CoursesV2';
@@ -7,7 +7,13 @@ import GetCategoriesDataV2 from '@/app/_services/GetCategoriesDataV2';
 import { getLocationBySubdomain } from '@/app/_services/LocationsService';
 import { Course } from '@/types/CoursesV2Response';
 
-const Grid = dynamic(() => import('@/app/_components/Grid').then((module) => module.Grid));
+const Grid = dynamic(() => import('@/app/_components/Grid').then((module) => module.Grid), {
+  loading: () => (
+    <div className="flex items-center justify-center py-8">
+      <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-blue-500" />
+    </div>
+  ),
+});
 
 const CONCURRENCY_LIMIT = 8;
 
@@ -48,7 +54,7 @@ export default async function Page({
     for (let i = 0; i < ids.length; i += CONCURRENCY_LIMIT) {
       const batch = ids.slice(i, i + CONCURRENCY_LIMIT);
       const results = await Promise.allSettled(batch.map(callback));
-      
+
       results.forEach((result) => {
         if (result.status === 'fulfilled') {
           allResults.push(...result.value);
@@ -64,7 +70,7 @@ export default async function Page({
     const data = await CoursesV2(org, id);
     return data.courses;
   });
-  
+
   courses.push(...fetchedCourses);
 
   const location = getLocationBySubdomain(org);
