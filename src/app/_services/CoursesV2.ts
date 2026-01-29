@@ -1,6 +1,7 @@
+import { cache } from 'react';
 import { CoursesV2Response } from '../../types/CoursesV2Response';
 
-const CoursesV2 = async (subdomain: string, calendarId: string): Promise<CoursesV2Response> => {
+const CoursesV2 = cache(async (subdomain: string, calendarId: string): Promise<CoursesV2Response> => {
   try {
     const response = await fetch(
       `https://${subdomain}.perfectmind.com/Clients/BookMe4BookingPagesV2/CoursesV2`,
@@ -30,7 +31,7 @@ const CoursesV2 = async (subdomain: string, calendarId: string): Promise<Courses
 
     return { courses: [], nextKey: '' };
   }
-};
+});
 
 export default CoursesV2;
 

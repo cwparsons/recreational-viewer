@@ -1,4 +1,6 @@
-export const Checkbox = ({
+import { memo } from 'react';
+
+export const Checkbox = memo(({
   checked,
   onChange,
   label,
@@ -16,5 +18,7 @@ export const Checkbox = ({
     />
     <span>{label}</span>
   </label>
-);
+));
+
+Checkbox.displayName = 'Checkbox';
 

@@ -1,6 +1,7 @@
+import { cache } from 'react';
 import { GetCategoriesDataV2Response } from '@/types/GetCategoriesDataV2Response';
 
-const GetCategoriesDataV2 = async (subdomain: string): Promise<GetCategoriesDataV2Response> => {
+const GetCategoriesDataV2 = cache(async (subdomain: string): Promise<GetCategoriesDataV2Response> => {
   try {
     const response = await fetch(
       `https://${subdomain}.perfectmind.com/Clients/BookMe4V2/GetCategoriesDataV2`,
@@ -25,7 +26,7 @@ const GetCategoriesDataV2 = async (subdomain: string): Promise<GetCategoriesData
 
     return [];
   }
-};
+});
 
 export default GetCategoriesDataV2;
 

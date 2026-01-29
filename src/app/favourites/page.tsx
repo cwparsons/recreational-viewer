@@ -1,31 +1,14 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { useFavourites } from '@/app/_hooks/use-favourites';
 import { formatOccurrenceDescription } from '@/app/_lib/format-occurrence-description';
+import { formatCourseData } from '@/app/_lib/format-course-data';
 import Header from '@/app/_components/Header';
 import { HeartIcon } from '@/app/_components/HeartIcon';
 
 export default function FavouritesPage() {
   const { favourites, toggleFavourite, isFavourite } = useFavourites();
-
-  const formatCourseData = (course: any) => ({
-    ...course,
-    OccurrenceMinStartDate: new Date(course.OccurrenceMinStartDate),
-    OccurrenceMaxStartDate: course.OccurrenceMaxStartDate
-      ? new Date(course.OccurrenceMaxStartDate.replace(' - ', ''))
-      : undefined,
-    FacilityLocation: course.OrgIsSingleLocation
-      ? course.Facility || course.Location
-      : course.Location + (course.Facility ? ' - ' + course.Facility : ''),
-    spots:
-      course.Spots === 'FULL - Waitlist Available'
-        ? 'Wait list'
-        : course.Spots !== ''
-          ? course.Spots.replace(' left', '')
-          : course.BookButtonText,
-  });
 
   return (
     <>

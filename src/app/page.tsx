@@ -34,8 +34,8 @@ export default async function Home() {
           <Card key={name} title={name}>
             <nav aria-label={`${name} locations`}>
               <ul className="flex flex-col gap-2">
-                {sites.map((location, i) => (
-                  <li key={i}>
+                {sites.map((location) => (
+                  <li key={location.subdomain}>
                     <Link href={`/org/${location.subdomain}`}>{location.name}</Link>
                   </li>
                 ))}

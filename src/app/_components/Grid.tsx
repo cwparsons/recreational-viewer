@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 import Link from 'next/link';
 
@@ -22,6 +22,7 @@ import { useFavourites } from '@/app/_hooks/use-favourites';
 import { type Course } from '@/types/CoursesV2Response';
 
 import { formatOccurrenceDescription } from '../_lib/format-occurrence-description';
+import { formatCourseData, formatAgeDisplay, type FormattedCourse } from '../_lib/format-course-data';
 import { Checkbox } from './Checkbox';
 import { HeartIcon } from './HeartIcon';
 
@@ -38,25 +39,8 @@ ModuleRegistry.registerModules([
 
 type GridProps = { org: string; courses: Course[] };
 
-type Row = Omit<Course, 'OccurrenceMinStartDate' | 'OccurrenceMaxStartDate'> & {
-  OccurrenceMinStartDate: Date;
-  OccurrenceMaxStartDate?: Date;
-  MinimumAge: number;
-  MaximumAge: number;
-  FacilityLocation: string;
-  spots: string;
-};
-
-const valueFormatter = ({ value }: { value: number }) => {
-  const totalMonths = Math.round(value * 12);
-  const years = Math.floor(totalMonths / 12);
-  const months = totalMonths % 12;
-
-  return `${years}y ${months}m`;
-};
-
 export const Grid = ({ org, courses }: GridProps) => {
-  const gridRef = useRef<AgGridReact<Row>>(null);
+  const gridRef = useRef<AgGridReact<FormattedCourse>>(null);
   const { isFavourite, toggleFavourite } = useFavourites();
   const [filters, setFilters] = useLocalStorage('courseFilters', {
     upcoming: false,
@@ -64,16 +48,17 @@ export const Grid = ({ org, courses }: GridProps) => {
     weekend: false,
     age: { years: undefined as number | undefined, months: undefined as number | undefined },
   });
-  const [isDesktop, setIsDesktop] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(() => 
+    typeof window !== 'undefined' ? window.innerWidth > 1024 : true
+  );
+  const [isDarkMode, setIsDarkMode] = useState(() => 
+    typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)').matches : false
+  );
 
   // Responsive check using ResizeObserver
   useLayoutEffect(() => {
-    const check = () => setIsDesktop(window.innerWidth > 1024);
-    check();
-
     const resizeObserver = new ResizeObserver(() => {
-      check();
+      setIsDesktop(window.innerWidth > 1024);
     });
 
     resizeObserver.observe(document.body);
@@ -84,7 +69,6 @@ export const Grid = ({ org, courses }: GridProps) => {
   // Dark mode detection
   useLayoutEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    setIsDarkMode(mediaQuery.matches);
 
     const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
     mediaQuery.addEventListener('change', handleChange);
@@ -92,28 +76,11 @@ export const Grid = ({ org, courses }: GridProps) => {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  // Process row data
-  const rowData: Row[] = courses.map((course) => ({
-    ...course,
-    OccurrenceMinStartDate: new Date(course.OccurrenceMinStartDate),
-    OccurrenceMaxStartDate: course.OccurrenceMaxStartDate
-      ? new Date(course.OccurrenceMaxStartDate.replace(' - ', ''))
-      : undefined,
-    MinimumAge: (course.MinAge ?? 0) + (course.MinAgeMonths ?? 0) / 12,
-    MaximumAge: (course.MaxAge ?? 0) + (course.MaxAgeMonths ?? 0) / 12,
-    FacilityLocation: course.OrgIsSingleLocation
-      ? course.Facility || course.Location
-      : course.Location + (course.Facility ? ' - ' + course.Facility : ''),
-    spots:
-      course.Spots === 'FULL - Waitlist Available'
-        ? 'Wait list'
-        : course.Spots !== ''
-          ? course.Spots.replace(' left', '')
-          : course.BookButtonText,
-  }));
+  // Process row data with memoization
+  const rowData = useMemo(() => courses.map(formatCourseData), [courses]);
 
-  // Column definitions
-  const columnDefs: ColDef<Row>[] = [
+  // Column definitions with memoization
+  const columnDefs: ColDef<FormattedCourse>[] = useMemo(() => [
     {
       headerName: 'Name',
       field: 'EventName',
@@ -133,7 +100,7 @@ export const Grid = ({ org, courses }: GridProps) => {
       pinned: 'left',
       suppressAutoSize: true,
       suppressSizeToFit: true,
-      cellRenderer: ({ data }: { data: Row }) => {
+      cellRenderer: ({ data }: { data: FormattedCourse }) => {
         const originalCourse = courses.find(course => course.EventId === data.EventId);
         if (!originalCourse) return null;
 
@@ -168,13 +135,13 @@ export const Grid = ({ org, courses }: GridProps) => {
     {
       headerName: 'Min age',
       field: 'MinimumAge',
-      valueFormatter,
+      valueFormatter: ({ value }: { value: number }) => formatAgeDisplay(value),
       width: 120,
     },
     {
       headerName: 'Max age',
       field: 'MaximumAge',
-      valueFormatter,
+      valueFormatter: ({ value }: { value: number }) => formatAgeDisplay(value),
       width: 120,
     },
     { headerName: 'Price', field: 'PriceRange', width: 120 },
@@ -183,7 +150,7 @@ export const Grid = ({ org, courses }: GridProps) => {
       field: 'spots',
       pinned: 'right',
       width: 120,
-      cellRenderer: ({ data, value }: { data: Row; value: string }) => {
+      cellRenderer: ({ data, value }: { data: FormattedCourse; value: string }) => {
         const href = `https://${org}.perfectmind.com/Clients/BookMe4LandingPages/CoursesLandingPage?courseId=${data.EventId}`;
 
         return (
@@ -193,11 +160,11 @@ export const Grid = ({ org, courses }: GridProps) => {
         );
       },
     },
-  ];
+  ], [org, courses, isFavourite, toggleFavourite]);
 
   // Apply filters to grid and for mobile
   const filterRowData = useCallback(
-    (data: Row[]) => {
+    (data: FormattedCourse[]) => {
       return data.filter((row) => {
         // Upcoming events filter
         if (filters.upcoming) {
@@ -446,11 +413,11 @@ export const Grid = ({ org, courses }: GridProps) => {
                       </tr>
                       <tr>
                         <th className="pt-2 pr-4 text-start align-top font-semibold">Min age:</th>
-                        <td className="pt-2">{valueFormatter({ value: row.MinimumAge })}</td>
+                        <td className="pt-2">{formatAgeDisplay(row.MinimumAge)}</td>
                       </tr>
                       <tr>
                         <th className="pt-2 pr-4 text-start align-top font-semibold">Max age:</th>
-                        <td className="pt-2">{valueFormatter({ value: row.MaximumAge })}</td>
+                        <td className="pt-2">{formatAgeDisplay(row.MaximumAge)}</td>
                       </tr>
                       <tr>
                         <th className="pt-2 pr-4 text-start align-top font-semibold">Price:</th>

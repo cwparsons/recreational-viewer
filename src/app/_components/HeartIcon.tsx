@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 interface HeartIconProps {
   filled?: boolean;
@@ -6,7 +6,7 @@ interface HeartIconProps {
   onClick?: () => void;
 }
 
-export const HeartIcon = ({ filled = false, className = '', onClick }: HeartIconProps) => {
+export const HeartIcon = memo(({ filled = false, className = '', onClick }: HeartIconProps) => {
   return (
     <button
       onClick={onClick}
@@ -26,4 +26,6 @@ export const HeartIcon = ({ filled = false, className = '', onClick }: HeartIcon
       </svg>
     </button>
   );
-};
+});
+
+HeartIcon.displayName = 'HeartIcon';

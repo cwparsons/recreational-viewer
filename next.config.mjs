@@ -8,6 +8,8 @@ const nextConfig = {
     taint: true,
   },
 
+  reactCompiler: true,
+
   redirects: async () => [
     {
       source: '/city/:org',
