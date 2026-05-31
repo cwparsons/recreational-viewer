@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 
 import Header from '@/app/_components/Header';
 import CoursesV2 from '@/app/_services/CoursesV2';
@@ -8,12 +9,16 @@ import { getLocationBySubdomain } from '@/app/_services/LocationsService';
 import { Course } from '@/types/CoursesV2Response';
 
 const Grid = dynamic(() => import('@/app/_components/Grid').then((module) => module.Grid), {
-  loading: () => (
-    <div className="flex items-center justify-center py-8">
+  loading: () => <GridLoadingPlaceholder />,
+});
+
+function GridLoadingPlaceholder() {
+  return (
+    <div className="flex items-center justify-center py-12">
       <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-blue-500" />
     </div>
-  ),
-});
+  );
+}
 
 const CONCURRENCY_LIMIT = 8;
 
@@ -37,15 +42,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ org: string; ids: string[] }>;
-}) {
-  const { org, ids } = await params;
-
-  const courses: Course[] = [];
-
+// Separate Server Component to handle streaming data fetch
+async function CalendarCourses({ org, ids }: { org: string; ids: string[] }) {
   const executeInBatches = async function <T>(
     ids: T[],
     callback: (id: T) => Promise<Course[]>,
@@ -71,7 +69,15 @@ export default async function Page({
     return data.courses;
   });
 
-  courses.push(...fetchedCourses);
+  return <Grid org={org} courses={fetchedCourses} />;
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ org: string; ids: string[] }>;
+}) {
+  const { org, ids } = await params;
 
   const location = getLocationBySubdomain(org);
   const orgName = location?.name ?? org;
@@ -94,9 +100,11 @@ export default async function Page({
       />
 
       <div className="grow">
-        <Grid org={org} courses={courses} />
+        {/* Render Header and breadcrumbs immediately; stream the Grid once API requests finish */}
+        <Suspense fallback={<GridLoadingPlaceholder />}>
+          <CalendarCourses org={org} ids={ids} />
+        </Suspense>
       </div>
     </>
   );
 }
-

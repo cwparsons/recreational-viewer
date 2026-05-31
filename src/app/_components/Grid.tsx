@@ -4,18 +4,9 @@ import { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 import Link from 'next/link';
 
-import { ColDef, ModuleRegistry, colorSchemeDarkBlue, themeQuartz } from 'ag-grid-community';
-import {
-  ClientSideRowModelModule,
-  ColumnAutoSizeModule,
-  CustomFilterModule,
-  DateFilterModule,
-  NumberFilterModule,
-  TextFilterModule,
-  TooltipModule,
-  ValidationModule,
-} from 'ag-grid-community';
-import { AgGridReact } from 'ag-grid-react';
+import type { ColDef } from 'ag-grid-community';
+import type { AgGridReact } from 'ag-grid-react';
+import dynamic from 'next/dynamic';
 
 import { useFavourites } from '@/app/_hooks/use-favourites';
 import { useLocalStorage } from '@/app/_hooks/use-location-storage';
@@ -30,16 +21,17 @@ import { formatOccurrenceDescription } from '../_lib/format-occurrence-descripti
 import { Checkbox } from './Checkbox';
 import { HeartIcon } from './HeartIcon';
 
-ModuleRegistry.registerModules([
-  ClientSideRowModelModule,
-  ColumnAutoSizeModule,
-  CustomFilterModule,
-  DateFilterModule,
-  NumberFilterModule,
-  TextFilterModule,
-  TooltipModule,
-  ValidationModule,
-]);
+const DesktopGrid = dynamic(
+  () => import('./DesktopGrid').then((module) => module.DesktopGrid),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex items-center justify-center py-8">
+        <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-blue-500" />
+      </div>
+    ),
+  },
+);
 
 type GridProps = { org: string; courses: Course[] };
 
@@ -82,6 +74,15 @@ export const Grid = ({ org, courses }: GridProps) => {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
+  // Process courses into a Map for O(1) searches
+  const coursesById = useMemo(() => {
+    const map = new Map<string, Course>();
+    for (const course of courses) {
+      map.set(course.EventId, course);
+    }
+    return map;
+  }, [courses]);
+
   // Process row data with memoization
   const rowData = useMemo(() => courses.map(formatCourseData), [courses]);
 
@@ -108,7 +109,7 @@ export const Grid = ({ org, courses }: GridProps) => {
         suppressAutoSize: true,
         suppressSizeToFit: true,
         cellRenderer: ({ data }: { data: FormattedCourse }) => {
-          const originalCourse = courses.find((course) => course.EventId === data.EventId);
+          const originalCourse = coursesById.get(data.EventId);
           if (!originalCourse) return null;
 
           return (
@@ -168,26 +169,32 @@ export const Grid = ({ org, courses }: GridProps) => {
         },
       },
     ],
-    [org, courses, isFavourite, toggleFavourite],
+    [org, coursesById, isFavourite, toggleFavourite],
   );
 
   // Apply filters to grid and for mobile
   const filterRowData = useCallback(
     (data: FormattedCourse[]) => {
+      let todayBoundary: Date | null = null;
+      if (filters.upcoming) {
+        const today = new Date();
+        todayBoundary = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      }
+      const isWeekendRegex = /Sat|Sun/;
+      const spotsAvailableRegex = /Closed|Wait|Full/i;
+
       return data.filter((row) => {
         // Upcoming events filter
-        if (filters.upcoming) {
-          const today = new Date();
-          if (row.OccurrenceMinStartDate < new Date(today.toISOString().split('T')[0]))
-            return false;
+        if (filters.upcoming && todayBoundary) {
+          if (row.OccurrenceMinStartDate < todayBoundary) return false;
         }
         // Weekend filter
         if (filters.weekend) {
-          if (!/Sat|Sun/.test(row.OccurrenceDescription)) return false;
+          if (!isWeekendRegex.test(row.OccurrenceDescription)) return false;
         }
         // Available spots filter
         if (filters.spotsAvailable) {
-          if (/Closed|Wait|Full/i.test(row.spots)) return false;
+          if (spotsAvailableRegex.test(row.spots)) return false;
         }
         // Age filter
         if (filters.age.years !== undefined || filters.age.months !== undefined) {
@@ -335,15 +342,12 @@ export const Grid = ({ org, courses }: GridProps) => {
 
       {/* Desktop grid */}
       {isDesktop && (
-        <AgGridReact
-          autoSizeStrategy={{ type: 'fitGridWidth' }}
+        <DesktopGrid
           columnDefs={columnDefs}
-          defaultColDef={{ filter: true }}
-          domLayout="autoHeight"
-          onGridReady={applyFilters}
-          ref={gridRef}
           rowData={rowData}
-          theme={isDarkMode ? themeQuartz.withPart(colorSchemeDarkBlue) : themeQuartz}
+          isDarkMode={isDarkMode}
+          applyFilters={applyFilters}
+          ref={gridRef}
         />
       )}
 
@@ -364,9 +368,7 @@ export const Grid = ({ org, courses }: GridProps) => {
                       <HeartIcon
                         filled={isFavourite(row.EventId)}
                         onClick={() => {
-                          const originalCourse = courses.find(
-                            (course) => course.EventId === row.EventId,
-                          );
+                          const originalCourse = coursesById.get(row.EventId);
                           if (originalCourse) toggleFavourite(originalCourse, org);
                         }}
                       />
