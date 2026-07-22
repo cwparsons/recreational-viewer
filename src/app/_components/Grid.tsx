@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import Link from 'next/link';
 
@@ -19,6 +19,7 @@ import {
 } from '../_lib/format-course-data';
 import { formatOccurrenceDescription } from '../_lib/format-occurrence-description';
 import { Checkbox } from './Checkbox';
+import { FavouriteCell } from './FavouriteCell';
 import { HeartIcon } from './HeartIcon';
 
 const DesktopGrid = dynamic(
@@ -44,31 +45,30 @@ export const Grid = ({ org, courses }: GridProps) => {
     weekend: false,
     age: { years: undefined as number | undefined, months: undefined as number | undefined },
   });
-  const [isDesktop, setIsDesktop] = useState(() =>
-    typeof window !== 'undefined' ? window.innerWidth > 1024 : true,
-  );
-  const [isDarkMode, setIsDarkMode] = useState(() =>
-    typeof window !== 'undefined'
-      ? window.matchMedia('(prefers-color-scheme: dark)').matches
-      : false,
-  );
+  // `null` until mounted so the server render and the first client render agree
+  // (avoids a hydration mismatch between the desktop grid and the mobile list,
+  // and keeps ag-grid off the download path for mobile visitors).
+  const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Responsive check using ResizeObserver
-  useLayoutEffect(() => {
-    const resizeObserver = new ResizeObserver(() => {
-      setIsDesktop(window.innerWidth > 1024);
-    });
+  // Track the desktop breakpoint with matchMedia so we only re-render when the
+  // breakpoint is actually crossed, not on every resize.
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 1025px)');
+    const handleChange = () => setIsDesktop(mediaQuery.matches);
 
-    resizeObserver.observe(document.body);
+    handleChange();
+    mediaQuery.addEventListener('change', handleChange);
 
-    return () => resizeObserver.disconnect();
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  // Dark mode detection
-  useLayoutEffect(() => {
+  // Follow the OS colour scheme.
+  useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => setIsDarkMode(mediaQuery.matches);
 
-    const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+    handleChange();
     mediaQuery.addEventListener('change', handleChange);
 
     return () => mediaQuery.removeEventListener('change', handleChange);
@@ -112,14 +112,7 @@ export const Grid = ({ org, courses }: GridProps) => {
           const originalCourse = coursesById.get(data.EventId);
           if (!originalCourse) return null;
 
-          return (
-            <div className="flex h-full items-center justify-center">
-              <HeartIcon
-                filled={isFavourite(data.EventId)}
-                onClick={() => toggleFavourite(originalCourse, org)}
-              />
-            </div>
-          );
+          return <FavouriteCell course={originalCourse} org={org} />;
         },
       },
       { headerName: 'No.', field: 'CourseIdTrimmed', width: 100 },
@@ -169,7 +162,7 @@ export const Grid = ({ org, courses }: GridProps) => {
         },
       },
     ],
-    [org, coursesById, isFavourite, toggleFavourite],
+    [org, coursesById],
   );
 
   // Apply filters to grid and for mobile
@@ -260,7 +253,7 @@ export const Grid = ({ org, courses }: GridProps) => {
   }, [filters, gridRef]);
 
   // Apply filters when they change
-  useLayoutEffect(() => {
+  useEffect(() => {
     applyFilters();
   }, [filters, applyFilters]);
 
@@ -340,8 +333,16 @@ export const Grid = ({ org, courses }: GridProps) => {
         </button>
       </form>
 
+      {/* Before the breakpoint is measured, render a neutral placeholder so the
+          server and first client render match. */}
+      {isDesktop === null && (
+        <div className="flex items-center justify-center py-8">
+          <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-blue-500" />
+        </div>
+      )}
+
       {/* Desktop grid */}
-      {isDesktop && (
+      {isDesktop === true && (
         <DesktopGrid
           columnDefs={columnDefs}
           rowData={rowData}
@@ -352,7 +353,7 @@ export const Grid = ({ org, courses }: GridProps) => {
       )}
 
       {/* Mobile table using <details>/<summary> */}
-      {!isDesktop && (
+      {isDesktop === false && (
         <div className="flex flex-col gap-2">
           {filterRowData(rowData)
             .sort((a, b) => a.EventName.localeCompare(b.EventName))

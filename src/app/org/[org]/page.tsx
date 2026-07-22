@@ -4,9 +4,18 @@ import { notFound } from 'next/navigation';
 
 import { Card } from '@/app/_components/Card';
 import Header from '@/app/_components/Header';
-import { getLocationBySubdomain } from '@/app/_services/LocationsService';
+import { getLocationBySubdomain, getLocations } from '@/app/_services/LocationsService';
 
 import GetCategoriesDataV2 from '../../_services/GetCategoriesDataV2';
+
+// Prerender the known organizations at build time. The category fetch is
+// resilient (returns [] on failure), so a flaky upstream can't break the build;
+// pages refresh via the 1h fetch revalidation.
+export function generateStaticParams() {
+  return getLocations()
+    .flatMap((group) => group.sites)
+    .map((site) => ({ org: site.subdomain }));
+}
 
 export async function generateMetadata({
   params,

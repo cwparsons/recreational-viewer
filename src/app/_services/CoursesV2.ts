@@ -30,9 +30,12 @@ const CoursesV2 = cache(
 
       return response.json();
     } catch (error) {
+      // Rethrow so the caller can distinguish a failed fetch from an empty
+      // result set. Callers batching many calendars decide whether a partial
+      // failure is tolerable or the whole page should error.
       console.error(`Failed to fetch courses for ${subdomain} calendar ${calendarId}:`, error);
 
-      return { courses: [], nextKey: '' };
+      throw error;
     }
   },
 );

@@ -42,32 +42,53 @@ export async function generateMetadata({
   };
 }
 
-// Separate Server Component to handle streaming data fetch
-async function CalendarCourses({ org, ids }: { org: string; ids: string[] }) {
-  const executeInBatches = async function <T>(
-    ids: T[],
-    callback: (id: T) => Promise<Course[]>,
-  ): Promise<Course[]> {
-    const allResults: Course[] = [];
-    for (let i = 0; i < ids.length; i += CONCURRENCY_LIMIT) {
-      const batch = ids.slice(i, i + CONCURRENCY_LIMIT);
-      const results = await Promise.allSettled(batch.map(callback));
+// Run tasks with at most CONCURRENCY_LIMIT in flight at once, starting a new one
+// as soon as any finishes (no per-batch barrier, so one slow calendar doesn't
+// stall the rest). Returns each task's settled outcome, order-aligned to `items`.
+async function runWithPool<T, R>(
+  items: T[],
+  limit: number,
+  task: (item: T) => Promise<R>,
+): Promise<PromiseSettledResult<R>[]> {
+  const results = new Array<PromiseSettledResult<R>>(items.length);
+  let cursor = 0;
 
-      results.forEach((result) => {
-        if (result.status === 'fulfilled') {
-          allResults.push(...result.value);
-        } else {
-          console.error('Failed to fetch courses:', result.reason);
-        }
-      });
+  const worker = async () => {
+    while (cursor < items.length) {
+      const index = cursor++;
+      try {
+        results[index] = { status: 'fulfilled', value: await task(items[index]) };
+      } catch (reason) {
+        results[index] = { status: 'rejected', reason };
+      }
     }
-    return allResults;
   };
 
-  const fetchedCourses = await executeInBatches(ids, async (id) => {
-    const data = await CoursesV2(org, id);
-    return data.courses;
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+
+  return results;
+}
+
+// Separate Server Component to handle streaming data fetch
+async function CalendarCourses({ org, ids }: { org: string; ids: string[] }) {
+  const settled = await runWithPool(ids, CONCURRENCY_LIMIT, (id) => CoursesV2(org, id));
+
+  const fetchedCourses: Course[] = [];
+  let failures = 0;
+  settled.forEach((result) => {
+    if (result.status === 'fulfilled') {
+      fetchedCourses.push(...result.value.courses);
+    } else {
+      failures++;
+      console.error('Failed to fetch courses:', result.reason);
+    }
   });
+
+  // Partial failures are tolerable (show what loaded); a total failure means the
+  // upstream is down, so surface it to the error boundary instead of an empty grid.
+  if (failures === ids.length && ids.length > 0) {
+    throw new Error(`Failed to fetch courses for all ${ids.length} calendar(s) in ${org}`);
+  }
 
   return <Grid org={org} courses={fetchedCourses} />;
 }
